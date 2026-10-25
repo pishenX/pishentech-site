@@ -959,6 +959,55 @@ button {
   padding-top: 54px;
 }
 
+/* 只保留作品页时，顶部直接从作品标题开始 */
+.works-page {
+  padding: 78px 0 100px;
+}
+
+.works-head {
+  align-items: flex-end;
+  margin-bottom: 36px;
+}
+
+.works-title {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(2.25rem, 4.9vw, 3.55rem);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.14;
+}
+
+.works-head-side {
+  max-width: 430px;
+}
+
+.works-count {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 15px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.works-count strong {
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.works-count i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b8c5d8;
+}
+
 .section-head {
   display: flex;
   align-items: flex-end;
@@ -1289,6 +1338,7 @@ button {
   line-height: 1;
 }
 
+.empty-state h2,
 .empty-state h3 {
   margin: 14px 0 5px;
   font-size: 17px;
@@ -2525,6 +2575,11 @@ button {
     display: flex;
   }
 
+  /* 只有作品页：手机上也保留右上角的「联系我」 */
+  body[data-page="works"] .header-contact {
+    display: inline-flex;
+  }
+
   .mobile-home-link {
     display: inline-flex;
   }
@@ -2737,6 +2792,22 @@ button {
 
   .works {
     padding-top: 42px;
+  }
+
+  .works-page {
+    padding: 52px 0 70px;
+  }
+
+  .works-head {
+    margin-bottom: 25px;
+  }
+
+  .works-title {
+    font-size: clamp(1.9rem, 8.6vw, 2.5rem);
+  }
+
+  .works-head-side {
+    max-width: 100%;
   }
 
   .section {
