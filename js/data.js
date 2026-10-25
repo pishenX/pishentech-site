@@ -68,7 +68,7 @@ window.SITE_DATA = {
 
     {
       id: "what-to-eat",
-      title: "今天吃什么",
+      title: "吃饭",
       subtitle: "EAT SOMETHING",
       category: "miniprogram",
       year: "2024",
@@ -82,6 +82,23 @@ window.SITE_DATA = {
       codeLabel: "查看代码",
       download: false
     },
+
+    {
+      id: "zhihuishu-helper",
+      title: "智慧树学习助手",
+      subtitle: "COURSE AUTOMATION",
+      category: "desktop",
+      year: "2026",
+      description: "自动播放、随堂练习、跳过章节测试，视频结束自动续节。",
+      tags: ["Windows", "PowerShell", "UI Automation"],
+      cover: "assets/cover-zhihuishu.svg",
+      coverAlt: "智慧树学习助手作品封面，深蓝色终端与课程播放界面",
+      link: "zhihuishu/",
+      linkLabel: "查看详情",
+      code: "",
+      codeLabel: "查看代码",
+      download: false
+    }
 
   ],
 

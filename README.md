@@ -1,6 +1,6 @@
 # 皮神科技 · 作品页
 
-现在网站**只保留作品页**：打开就是作品列表，没有首页大横幅，也没有关于页。整体仍然是浅色背景、蓝色主色、圆角卡片，手机上是一列卡片，不用横向滚动。
+现在网站以**作品页**为主，并增加了一个工具详情页（`/zhihuishu/`）。打开首页就是作品列表，没有首页大横幅，也没有关于页。整体仍然是浅色背景、蓝色主色、圆角卡片，手机上是一列卡片，不用横向滚动。
 
 
 
@@ -33,14 +33,21 @@
 
 ```text
 pishentech-site/
-├── index.html          ← 唯一的页面：作品列表
+├── index.html          ← 作品列表
 ├── 404.html            ← 找不到页面时显示
+├── zhihuishu/
+│   └── index.html      ← 智慧树学习助手详情页
 ├── css/
-│   └── style.css       ← 颜色、圆角、卡片、手机布局
+│   ├── style.css       ← 颜色、圆角、卡片、手机布局
+│   └── zhihuishu.css   ← 详情页专用样式
 ├── js/
 │   ├── data.js         ← ★ 最常改：作品、邮箱、GitHub
-│   └── site.js         ← 交互：筛选、卡片点击（一般别动）
-├── assets/             ← 作品封面、网站图标
+│   ├── site.js         ← 交互：卡片点击（一般别动）
+│   └── zhihuishu.js    ← 详情页的终端演示
+├── assets/
+│   ├── cover-zhihuishu.svg        ← 详情页作品封面
+│   └── downloads/
+│       └── zhihuishu-helper.zip   ← 可下载的 Windows 工具包
 ├── CNAME               ← GitHub Pages 的域名文件
 ├── robots.txt          ← 搜索引擎抓取规则
 ├── sitemap.xml         ← 给搜索引擎的网站地图
@@ -56,8 +63,8 @@ pishentech-site/
 打开 `js/data.js`：
 
 - [ ] **第 18 行左右 `profile`**：品牌名、邮箱、GitHub。
-- [ ] **第 69 行 `projects`**：6 个示例作品，换成你真实的作品。
-- [ ] **第 38 行 `categories`**：分类不够用的话，在这里加。
+- [ ] **第 67 行 `projects`**：当前作品，换成你真实的作品。
+- [ ] **第 38 行 `categories`**：分类只显示在卡片左上角，不再有顶部筛选按钮，一般不用改。
 
 页面上的作品数量和“已开源”数量会自动计算，不用手改。
 
@@ -69,13 +76,13 @@ pishentech-site/
 
 打开 **`js/data.js`**：
 
-- **第 69 行**：`projects: [`，作品列表开始。
-- **第 70 行**：第一个示例作品。
-- **第 165 行**：最后一个作品结束。
-- **第 166 行**：`],`，列表结束。
+- **第 67 行**：`projects: [`，作品列表开始。
+- **第 69 行**：第一个作品。
+- **第 84 行**：最后一个作品结束。
+- **第 86 行**：`],`，列表结束。
 
-**在 `js/data.js` 第 166 行 `],` 的前面插入新作品。**  
-也就是先给第 165 行的 `}` 补一个英文逗号，再粘贴一整块新作品。
+**在 `js/data.js` 第 86 行 `],` 的前面插入新作品。**  
+最后一个作品后面的逗号已经留好了，直接把新作品块粘贴在它下面即可。
 
 ```js
     },
@@ -137,15 +144,31 @@ download: true
 3. `category` 是不是写成了不存在的分类？
 4. 按 **F12** 看 Console 有没有红字。
 
-### 4.5 想加分类？
+### 4.5 关于分类
 
-在 `js/data.js` **第 38 行** 的 `categories` 里加一行：
+现在顶部的分类筛选按钮已经删掉了，`category` 只用来显示卡片左上角的分类角标。
+
+如果新增一个分类，在 `js/data.js` **第 38 行** 的 `categories` 里加一行：
 
 ```js
 { id: "game", name: "小游戏" },
 ```
 
-然后在作品的 `category` 里填 `"game"`。
+然后在作品的 `category` 里填 `"game"`。它不会生成筛选按钮，只会改变卡片角标。
+
+### 4.6 新增的“智慧树学习助手”详情页
+
+这次除了首页卡片，还新增了一个独立详情页：
+
+- 页面：`zhihuishu/index.html`
+- 样式：`css/zhihuishu.css`
+- 终端演示：`js/zhihuishu.js`
+- 封面：`assets/cover-zhihuishu.svg`
+- 下载包：`assets/downloads/zhihuishu-helper.zip`
+
+首页卡片在 `js/data.js` 的 `projects` 列表里，`id` 是 `zhihuishu-helper`，点击后进入 `zhihuishu/`。
+
+下载包内不包含任何 API Key。以后更新 ZIP 后，记得把 `zhihuishu/index.html` 底部的 SHA-256 一起换掉（用 `Get-FileHash 文件 -Algorithm SHA256` 计算）。
 
 ---
 
@@ -185,6 +208,18 @@ download: true
 - `404.html`（导航里去掉“关于”和顶部“作品”）
 - `sitemap.xml`（去掉关于页地址）
 - `README.md`
+
+### 这次新增“智慧树”详情页需要上传
+
+- `zhihuishu/index.html`
+- `css/zhihuishu.css`
+- `js/zhihuishu.js`
+- `js/data.js`（新增卡片）
+- `assets/cover-zhihuishu.svg`
+- `assets/downloads/zhihuishu-helper.zip`
+- `sitemap.xml`
+
+最省事的做法还是把整个 `pishentech-site` 文件夹里的内容全选拖上去。
 
 ### 还要删掉一个旧文件
 
@@ -247,7 +282,7 @@ download: true
 打开 `index.html`，**第 56 行**：
 
 ```html
-<h1 class="works-title">一些做完了的小东西<span class="title-dot">.</span></h1>
+<h1 class="works-title">皮神妙妙小工具<span class="title-dot">.</span></h1>
 ```
 
 改文字时保留 `span` 和 `class`，这样蓝色小圆点还在。
@@ -269,7 +304,7 @@ download: true
 检查图片是否在 `assets` 里、文件名大小写是否一致、`cover` 路径有没有写错。
 
 **Q：作品数量会自动变吗？**  
-会。页面上的“06 个作品”“04 个已开源”都是自动算的。
+会。页面上的“02 个作品”“00 个已开源”都是自动算的。
 
 **Q：为什么网站没有“关于”页了？**  
 这是你选择的“只留作品”。如果以后想加回来，需要重新做页面并加导航。
@@ -284,6 +319,6 @@ download: true
 
 ## 10. 最后
 
-这个网站现在只有一页，内容都在 `js/data.js` 里。加作品时不用碰 HTML 和 CSS，改数据就行。
+这个网站现在有作品首页和一个工具详情页。作品卡片内容在 `js/data.js` 里；详情页是独立的 `zhihuishu/index.html`，加新作品时通常只需要改数据。
 
 先替换示例作品和邮箱，再上传到 GitHub，网站就是你的了。

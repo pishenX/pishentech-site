@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="coverZhihuishuTitle coverZhihuishuDesc">
+  <title id="coverZhihuishuTitle">智慧树学习助手作品封面</title>
+  <desc id="coverZhihuishuDesc">深蓝色终端窗口里显示课程目录、正在播放的视频和一个自动运行状态面板。</desc>
+  <defs>
+    <linearGradient id="zhBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06101f"/>
+      <stop offset=".55" stop-color="#081a30"/>
+      <stop offset="1" stop-color="#0b2242"/>
+    </linearGradient>
+    <linearGradient id="zhWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1b33"/>
+      <stop offset="1" stop-color="#081426"/>
+    </linearGradient>
+    <linearGradient id="zhAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="zhVideo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123a63"/>
+      <stop offset=".55" stop-color="#0d2a4d"/>
+      <stop offset="1" stop-color="#0a1f3b"/>
+    </linearGradient>
+    <radialGradient id="zhGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#2563eb" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="zhCyan" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="zhShadow" x="-15%" y="-15%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000" flood-opacity=".5"/>
+    </filter>
+    <pattern id="zhGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#93c5fd" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#zhBg)"/>
+  <rect width="1200" height="750" fill="url(#zhGrid)"/>
+  <circle cx="1030" cy="70" r="330" fill="url(#zhGlow)"/>
+  <circle cx="120" cy="720" r="300" fill="url(#zhCyan)"/>
+
+  <g fill="#7dd3fc" opacity=".22">
+    <circle cx="64" cy="134" r="3"/>
+    <circle cx="96" cy="106" r="2"/>
+    <circle cx="1140" cy="660" r="3"/>
+    <circle cx="1104" cy="692" r="2"/>
+  </g>
+
+  <g filter="url(#zhShadow)">
+    <rect x="72" y="76" width="1056" height="598" rx="27" fill="url(#zhWindow)" stroke="#233c60" stroke-width="1.5"/>
+  </g>
+
+  <!-- 标题栏 -->
+  <path d="M72 103c0-15 12-27 27-27h1002c15 0 27 12 27 27v33H72Z" fill="#101f3c"/>
+  <circle cx="103" cy="106" r="4.5" fill="#fb7185"/>
+  <circle cx="120" cy="106" r="4.5" fill="#fbbf24"/>
+  <circle cx="137" cy="106" r="4.5" fill="#34d399"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="166" y="91" width="28" height="28" rx="8" fill="url(#zhAccent)"/>
+    <path d="M175 101h10v8h-10Z" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="m178 104 3 2 3-2" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="207" y="109" fill="#e2e8f0" font-size="12.5" font-weight="600">智慧树学习助手</text>
+    <text x="327" y="108" fill="#6580a5" font-size="8" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="1.4">COURSE AUTOMATION</text>
+  </g>
+  <rect x="972" y="91" width="112" height="27" rx="8" fill="#0b1730" stroke="#2a4062"/>
+  <circle cx="988" cy="104.5" r="3" fill="#34d399"/>
+  <text x="999" y="108" fill="#7e99bc" font-size="9" font-family="'SFMono-Regular',Consolas,monospace">RUNNING</text>
+
+  <!-- 左侧课程目录 -->
+  <rect x="98" y="158" width="272" height="486" rx="16" fill="#09182c" stroke="#1d3350"/>
+  <text x="120" y="190" fill="#e2e8f0" font-size="14" font-weight="700" font-family="'PingFang SC','Microsoft YaHei',sans-serif">人工智能导论</text>
+  <text x="120" y="209" fill="#5f7898" font-size="8.5" font-family="'SFMono-Regular',Consolas,monospace">TIANJIN UNIVERSITY</text>
+  <line x1="118" y1="228" x2="350" y2="228" stroke="#1f3552"/>
+
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10.5">
+    <text x="122" y="256" fill="#7f97b8">1.1</text>
+    <text x="154" y="256" fill="#8ea6c4">人工智能的基本概念</text>
+    <circle cx="338" cy="252" r="5" fill="#10b981" opacity=".9"/>
+    <path d="m335.5 252 1.8 1.8 3-3.3" fill="none" stroke="#052e1a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="112" y="269" width="244" height="36" rx="9" fill="#102b4b" stroke="#24527f"/>
+    <text x="122" y="292" fill="#60a5fa" font-weight="700">1.2</text>
+    <text x="154" y="292" fill="#dbeafe">人工智能的发展简史</text>
+    <rect x="318" y="281" width="22" height="5" rx="2.5" fill="#3b82f6"/>
+    <rect x="318" y="291" width="14" height="4" rx="2" fill="#1d4ed8"/>
+
+    <text x="122" y="329" fill="#7f97b8">1.3</text>
+    <text x="154" y="329" fill="#8ea6c4">人工智能的发展趋势</text>
+    <text x="122" y="361" fill="#7f97b8">1.4</text>
+    <text x="154" y="361" fill="#8ea6c4">人工智能的伦理问题</text>
+    <text x="122" y="393" fill="#7f97b8">1.5</text>
+    <text x="154" y="393" fill="#8ea6c4">课程安排和参考书目</text>
+    <rect x="122" y="411" width="34" height="16" rx="5" fill="#2a1d15" stroke="#5b3b22"/>
+    <text x="139" y="422" fill="#fbbf24" font-size="8" text-anchor="middle">测试</text>
+    <text x="171" y="422" fill="#64748b" font-size="8.5">自动跳过</text>
+
+    <line x1="118" y1="444" x2="350" y2="444" stroke="#1f3552"/>
+    <text x="122" y="472" fill="#526b8b" font-size="9">第二章</text>
+    <text x="122" y="491" fill="#8ea6c4">人类智能</text>
+    <text x="122" y="521" fill="#526b8b" font-size="9">第三章</text>
+    <text x="122" y="540" fill="#8ea6c4">知识工程与知识图谱</text>
+    <text x="122" y="570" fill="#526b8b" font-size="9">第四章</text>
+    <text x="122" y="589" fill="#8ea6c4">机器学习</text>
+  </g>
+
+  <!-- 右侧视频 -->
+  <rect x="392" y="158" width="704" height="340" rx="16" fill="#09182c" stroke="#1d3350"/>
+  <rect x="408" y="174" width="672" height="274" rx="11" fill="url(#zhVideo)"/>
+  <g opacity=".5">
+    <circle cx="744" cy="300" r="42" fill="#0b1b30" stroke="#3b82f6" stroke-opacity=".55"/>
+    <path d="m735 284 22 16-22 16Z" fill="#93c5fd"/>
+  </g>
+  <rect x="408" y="174" width="672" height="274" rx="11" fill="none" stroke="#2a4d75"/>
+  <text x="430" y="428" fill="#dbeafe" font-size="12" font-weight="600" font-family="'PingFang SC','Microsoft YaHei',sans-serif">1.2 人工智能的发展简史</text>
+  <text x="430" y="445" fill="#5f7898" font-size="8.5" font-family="'SFMono-Regular',Consolas,monospace">00:12:48 / 00:26:25</text>
+  <rect x="408" y="458" width="672" height="4" rx="2" fill="#18304d"/>
+  <rect x="408" y="458" width="328" height="4" rx="2" fill="url(#zhAccent)"/>
+  <circle cx="736" cy="460" r="5" fill="#7dd3fc"/>
+
+  <!-- 状态面板 -->
+  <rect x="392" y="516" width="704" height="128" rx="16" fill="#09182c" stroke="#1d3350"/>
+  <g font-family="'SFMono-Regular',Consolas,monospace" font-size="9.5">
+    <text x="414" y="543" fill="#5f7898">PS D:\ZhihuishuHelper&gt; .\Start-Helper.cmd</text>
+    <text x="414" y="565" fill="#34d399">[21:30:01] 已连接：智慧树 - Microsoft Edge</text>
+    <text x="414" y="585" fill="#93c5fd">[21:30:04] 视频状态：playing</text>
+    <text x="414" y="605" fill="#fbbf24">[21:32:21] 跳过章节测试（不进入、不提交）</text>
+    <text x="414" y="625" fill="#a5b4fc">[21:32:23] 已进入：4.1</text>
+  </g>
+  <rect x="966" y="535" width="108" height="26" rx="7" fill="#0b2b24" stroke="#1d5a47"/>
+  <circle cx="981" cy="548" r="3" fill="#34d399"/>
+  <text x="991" y="552" fill="#6ee7b7" font-size="8.5" font-family="'SFMono-Regular',Consolas,monospace">AUTO NEXT</text>
+
+  <!-- 左下角品牌 -->
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="78" y="722" fill="#dbeafe" font-size="15" font-weight="700">皮神科技 · 桌面工具</text>
+    <text x="78" y="743" fill="#526b8b" font-size="9" letter-spacing="1.6">WINDOWS / POWERSHELL / UI AUTOMATION</text>
+  </g>
+  <g transform="translate(1044 700)">
+    <circle cx="24" cy="24" r="22" fill="#0b1b30" stroke="#2a4d75"/>
+    <path d="m18 16 15 8-15 8Z" fill="#60a5fa"/>
+  </g>
+</svg>
