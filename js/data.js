@@ -65,24 +65,6 @@ window.SITE_DATA = {
        download    如果是直接下载文件，设为 true；否则 false
      ======================================================================== */
   projects: [
-
-    {
-      id: "what-to-eat",
-      title: "吃饭",
-      subtitle: "EAT SOMETHING",
-      category: "miniprogram",
-      year: "2024",
-      description: "选择困难症终结者，转一转，决定今天这一餐。",
-      tags: ["微信小程序", "云开发", "动效"],
-      cover: "assets/cover-food.svg",
-      coverAlt: "今天吃什么作品封面，暖色转盘与食物卡片",
-      link: "#",
-      linkLabel: "打开小程序",
-      code: "",
-      codeLabel: "查看代码",
-      download: false
-    },
-
     {
       id: "zhihuishu-helper",
       title: "智慧树学习助手",
