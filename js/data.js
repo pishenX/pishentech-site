@@ -17,8 +17,8 @@ window.SITE_DATA = {
      ------------------------------------------------------------------------ */
   profile: {
     brand: "皮神科技",                         // 左上角品牌名
-    email: "hello@pishentech.cn",              // 联系邮箱（记得换成真实可收信的邮箱）
-    github: "https://github.com/pishenX"       // 你的 GitHub 主页
+    email: "pishen2007@163.com",              // 联系邮箱
+    github: "https://github.com/pishenX"       // gitHub 主页
   },
 
   /* ------------------------------------------------------------------------
@@ -46,8 +46,6 @@ window.SITE_DATA = {
   /* ========================================================================
      四、作品列表  ←←← 以后加新作品，主要改这里
      ------------------------------------------------------------------------
-     ⚠️ 下面 6 个作品都是「示例」，名字、简介、链接、封面都是假的。
-        上线前请把它们换成你真实的作品；换完之后，页面上的作品数量会自动更新。
 
      每个作品是一个 { ... } 块，复制一整块，粘贴到列表最后，再修改内容即可。
      字段说明：
@@ -67,22 +65,7 @@ window.SITE_DATA = {
        download    如果是直接下载文件，设为 true；否则 false
      ======================================================================== */
   projects: [
-    {
-      id: "weather",
-      title: "天气小窗",
-      subtitle: "WEATHER WINDOW",
-      category: "miniprogram",
-      year: "2025",
-      description: "把未来七天的天气，装进一张会呼吸的小卡片里。",
-      tags: ["微信小程序", "原生开发", "和风天气"],
-      cover: "assets/cover-weather.svg",
-      coverAlt: "天气小窗作品封面，蓝色天空与七天天气预报界面",
-      link: "#",
-      linkLabel: "打开小程序",
-      code: "#",
-      codeLabel: "查看代码",
-      download: false
-    },
+
     {
       id: "what-to-eat",
       title: "今天吃什么",
@@ -99,77 +82,14 @@ window.SITE_DATA = {
       codeLabel: "查看代码",
       download: false
     },
-    {
-      id: "clipboard",
-      title: "剪贴板管家",
-      subtitle: "CLIPBOARD KEEPER",
-      category: "desktop",
-      year: "2025",
-      description: "复制过的内容不再弄丢，历史记录随手就能翻到。",
-      tags: ["Electron", "TypeScript", "Windows"],
-      cover: "assets/cover-clipboard.svg",
-      coverAlt: "剪贴板管家作品封面，深色桌面应用界面",
-      link: "#",
-      linkLabel: "下载试用",
-      code: "#",
-      codeLabel: "查看代码",
-      download: true
-    },
-    {
-      id: "paper-note",
-      title: "纸间",
-      subtitle: "PAPER NOTE",
-      category: "web",
-      year: "2024",
-      description: "一个安静、即开即用的 Markdown 笔记本。",
-      tags: ["JavaScript", "Markdown", "PWA"],
-      cover: "assets/cover-note.svg",
-      coverAlt: "纸间作品封面，米色写作界面与分栏预览",
-      link: "#",
-      linkLabel: "在线试用",
-      code: "#",
-      codeLabel: "查看代码",
-      download: false
-    },
-    {
-      id: "color-card",
-      title: "色卡",
-      subtitle: "COLOR CARD",
-      category: "extension",
-      year: "2023",
-      description: "在网页上随手取色，把喜欢的配色收进口袋。",
-      tags: ["Chrome 插件", "Canvas", "HSV"],
-      cover: "assets/cover-color.svg",
-      coverAlt: "色卡作品封面，彩色色块与取色器界面",
-      link: "#",
-      linkLabel: "安装插件",
-      code: "",
-      codeLabel: "查看代码",
-      download: false
-    },
-    {
-      id: "api-cheat",
-      title: "API 小抄",
-      subtitle: "API CHEATSHEET",
-      category: "web",
-      year: "2026",
-      description: "常用接口一搜就有，少开几个搜索标签页。",
-      tags: ["Vue", "Vite", "开源"],
-      cover: "assets/cover-api.svg",
-      coverAlt: "API 小抄作品封面，深色代码检索界面",
-      link: "#",
-      linkLabel: "在线使用",
-      code: "#",
-      codeLabel: "查看代码",
-      download: false
-    }
+
   ],
 
   /* ------------------------------------------------------------------------
-     五、页脚和按钮上的小文案（一般不用改）
+     五、页脚和按钮上的小文案
      ------------------------------------------------------------------------ */
   copy: {
-    footerTagline: "用代码做一些小而美的东西。",
+    footerTagline: "皮神实验室",
     copyright: "皮神科技"
   }
 };
