@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>404 · 页面走丢了 · 皮神科技</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body data-page="404">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header is-scrolled">
+    <div class="container header-inner">
+      <a class="brand" href="/index.html" aria-label="皮神科技首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="/index.html">首页</a>
+        <a href="/index.html#works">作品</a>
+        <a href="/about.html">关于</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm header-contact" href="/index.html">回到首页</a>
+        <a class="btn btn-ghost btn-sm mobile-home-link" href="/index.html">回首页</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="not-found">
+    <span class="not-found-art" aria-hidden="true"></span>
+    <div class="container not-found-inner">
+      <p class="eyebrow">404 / LOST IN SPACE</p>
+      <div class="not-found-code" aria-hidden="true">404</div>
+      <h1>这页好像走丢了。</h1>
+      <p>可能是链接写错了，也可能是我还没来得及做它。不如先去逛逛作品，或者回首页喝杯咖啡。</p>
+      <div class="not-found-actions">
+        <a class="btn btn-primary" href="/index.html">
+          回到首页
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="btn btn-ghost" href="/index.html#works">看看作品</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> 皮神科技. All rights reserved.</p>
+      <p class="footer-made">Made with <span aria-hidden="true">♥</span> &amp; too much coffee.</p>
+    </div>
+  </footer>
+
+  <script>
+    // 年份自动更新，省得每年手改
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

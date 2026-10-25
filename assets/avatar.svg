@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-labelledby="avatarTitle avatarDesc">
+  <title id="avatarTitle">皮神的头像</title>
+  <desc id="avatarDesc">蓝色背景上的卡通开发者头像，戴着圆框眼镜，穿白色卫衣。</desc>
+
+  <defs>
+    <linearGradient id="avatarBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="avatarShirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e8eef8"/>
+    </linearGradient>
+    <radialGradient id="avatarGlow" cx=".25" cy=".2" r=".8">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="avatarClip">
+      <rect width="480" height="480" rx="100"/>
+    </clipPath>
+    <filter id="avatarShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0b1b3a" flood-opacity=".22"/>
+    </filter>
+  </defs>
+
+  <g clip-path="url(#avatarClip)">
+    <rect width="480" height="480" fill="url(#avatarBg)"/>
+    <rect width="480" height="480" fill="url(#avatarGlow)"/>
+
+    <!-- 背景装饰 -->
+    <circle cx="401" cy="74" r="118" fill="#ffffff" opacity=".07"/>
+    <circle cx="66" cy="421" r="150" fill="#60a5fa" opacity=".18"/>
+    <circle cx="426" cy="342" r="80" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="426" cy="342" r="54" fill="none" stroke="#ffffff" stroke-opacity=".09" stroke-width="1.5"/>
+    <path d="M0 400C92 356 164 372 244 400s158 33 236-12v92H0Z" fill="#ffffff" opacity=".05"/>
+
+    <g fill="#bfdbfe" opacity=".8">
+      <path d="M82 144c4-12 20-12 24 0 11-2 18 7 14 16H66c-5-9 2-18 16-16Z"/>
+      <path d="M374 196c3-9 15-9 18 0 8-2 14 5 11 12h-40c-4-7 2-14 11-12Z" opacity=".55"/>
+    </g>
+    <g fill="#ffffff">
+      <path d="m101 87 3.6 10.4L115 101l-10.4 3.6L101 115l-3.6-10.4L87 101l10.4-3.6Z" opacity=".8"/>
+      <path d="m407 260 2.4 7 7 2.4-7 2.4-2.4 7-2.4-7-7-2.4 7-2.4Z" opacity=".55"/>
+    </g>
+
+    <!-- 身体 -->
+    <path d="M78 480c2-104 70-166 162-166s160 62 162 166Z" fill="url(#avatarShirt)" filter="url(#avatarShadow)"/>
+    <path d="M159 480c0-72 36-113 81-113s81 41 81 113Z" fill="#dbe7f7" opacity=".55"/>
+    <path d="M189 386c13 24 33 37 51 37s38-13 51-37l30 19c-18 40-46 60-81 60s-63-20-81-60Z" fill="#2563eb"/>
+    <path d="M206 404c7 12 20 19 34 19s27-7 34-19l-9-5c-5 8-15 13-25 13s-20-5-25-13Z" fill="#1e40af" opacity=".5"/>
+
+    <!-- 脖子与耳朵 -->
+    <rect x="213" y="321" width="54" height="72" rx="25" fill="#e7b08d"/>
+    <circle cx="132" cy="246" r="27" fill="#f2c3a3"/>
+    <circle cx="348" cy="246" r="27" fill="#f2c3a3"/>
+    <circle cx="132" cy="246" r="12" fill="#e7b08d" opacity=".55"/>
+    <circle cx="348" cy="246" r="12" fill="#e7b08d" opacity=".55"/>
+
+    <!-- 脸 -->
+    <ellipse cx="240" cy="236" rx="112" ry="124" fill="#f7c9a8"/>
+
+    <!-- 头发 -->
+    <path d="M127 236c-9-84 45-139 113-139 70 0 123 55 113 139-10-36-27-58-53-70-14-8-30-11-47-11-23 0-43 6-61 18-24 16-42 36-65 63Z" fill="#17233d"/>
+    <path d="M129 222c-12 31-10 68 4 99-27-13-42-46-38-80 2-21 16-33 34-19Z" fill="#17233d"/>
+    <path d="M351 222c12 31 10 68-4 99 27-13 42-46 38-80-2-21-16-33-34-19Z" fill="#17233d"/>
+    <path d="M158 160c29-30 67-42 105-36 24 4 44 15 59 30-20-8-42-12-65-9-37 5-68 10-99 15Z" fill="#25345a" opacity=".65"/>
+
+    <!-- 眉毛 -->
+    <path d="M181 221c11-7 24-8 36-3" fill="none" stroke="#6b402c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M263 218c12-5 25-4 36 3" fill="none" stroke="#6b402c" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 圆框眼镜 -->
+    <rect x="166" y="229" width="61" height="49" rx="21" fill="#ffffff" opacity=".16"/>
+    <rect x="253" y="229" width="61" height="49" rx="21" fill="#ffffff" opacity=".16"/>
+    <rect x="166" y="229" width="61" height="49" rx="21" fill="none" stroke="#17233d" stroke-width="6"/>
+    <rect x="253" y="229" width="61" height="49" rx="21" fill="none" stroke="#17233d" stroke-width="6"/>
+    <path d="M227 246h26" fill="none" stroke="#17233d" stroke-width="6" stroke-linecap="round"/>
+    <path d="M166 244h-23M314 244h23" fill="none" stroke="#17233d" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 眼睛、鼻子、嘴巴 -->
+    <circle cx="197" cy="252" r="5.5" fill="#17233d"/>
+    <circle cx="283" cy="252" r="5.5" fill="#17233d"/>
+    <circle cx="199" cy="250" r="1.8" fill="#ffffff"/>
+    <circle cx="285" cy="250" r="1.8" fill="#ffffff"/>
+    <path d="M239 260c-5 16-4 24 9 26" fill="none" stroke="#c98261" stroke-width="5" stroke-linecap="round"/>
+    <path d="M211 306c18 17 40 18 58 1" fill="none" stroke="#a64b3c" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- 腮红 -->
+    <ellipse cx="174" cy="289" rx="19" ry="9" fill="#ef8a7d" opacity=".30"/>
+    <ellipse cx="306" cy="289" rx="19" ry="9" fill="#ef8a7d" opacity=".30"/>
+
+    <!-- 卫衣上的小徽章 -->
+    <rect x="217" y="424" width="46" height="46" rx="13" fill="#2563eb" stroke="#ffffff" stroke-opacity=".35" stroke-width="2"/>
+    <path d="m232 439-7 7 7 7M248 439l7 7-7 7" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="2" y="2" width="476" height="476" rx="98" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="4"/>
+</svg>

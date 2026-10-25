@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="皮神科技 —— 皮神的个人作品集。这里展示我做的微信小程序、网页应用、桌面工具和浏览器插件。">
+  <meta name="author" content="皮神">
+  <meta name="theme-color" content="#f6f8fc">
+  <link rel="canonical" href="https://pishentech.cn/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="皮神科技">
+  <meta property="og:title" content="皮神科技 · 把有趣的小想法做成小软件">
+  <meta property="og:description" content="皮神的个人作品集：微信小程序、网页应用、桌面工具和浏览器插件。">
+  <meta property="og:url" content="https://pishentech.cn/">
+  <title>皮神科技 · 把有趣的小想法做成小软件</title>
+
+  <!-- 网站图标：想换的话，替换 assets/favicon.svg 即可 -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 所有内容都在 data.js 里；site.js 负责把内容放到页面上 -->
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
+</head>
+
+<body data-page="home">
+  <!-- 键盘用户按 Tab 时，可以直接跳到正文 -->
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- ==================== 顶部导航 ==================== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="皮神科技首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- 电脑端导航 -->
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="index.html" class="is-active" aria-current="page">首页</a>
+        <a href="#works">作品</a>
+        <a href="about.html">关于</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm header-contact" href="mailto:hello@pishentech.cn" data-email-link>
+          联系我
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 15 15 5M7 5h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- 手机端菜单按钮：点击后会展开下面的 mobile-nav -->
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开菜单" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 手机端展开菜单（电脑端不显示） -->
+    <div class="mobile-nav-wrap" id="mobile-nav" data-mobile-nav inert>
+      <nav class="mobile-nav" aria-label="手机端导航">
+        <a href="index.html" class="is-active" aria-current="page">
+          <span>首页</span>
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#works">
+          <span>作品</span>
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="about.html">
+          <span>关于</span>
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="mobile-nav-contact" href="mailto:hello@pishentech.cn" data-email-link>
+          发封邮件，聊聊想法
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ==================== 首屏 ==================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span data-profile="availability">开放合作与交流</span>
+          </p>
+
+          <h1 class="hero-title">
+            <span class="hero-title-line">把有趣的小想法，</span>
+            <span class="hero-title-line">做成<span class="mark">好用的小软件</span>。</span>
+          </h1>
+
+          <p class="hero-lead" data-profile="heroDescription">
+            这里是我的数字工作台：收集我写过的代码、做过的小工具，以及一些还在发芽的点子。慢慢做，认真改，希望它们刚好能帮到你。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#works">
+              看看作品
+              <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="about.html">认识我</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>微信小程序</span>
+            <i aria-hidden="true"></i>
+            <span>网页应用</span>
+            <i aria-hidden="true"></i>
+            <span>桌面工具</span>
+          </div>
+
+          <!-- 数字会自动计算，不需要手动改 -->
+          <div class="hero-stats" aria-label="网站数据">
+            <div class="stat-item">
+              <strong data-stat="projects">06</strong>
+              <span data-stat-label="projects">个作品</span>
+            </div>
+            <div class="stat-item">
+              <strong data-stat="opensource">04</strong>
+              <span data-stat-label="opensource">个已开源</span>
+            </div>
+            <div class="stat-item">
+              <strong data-stat="since">2022</strong>
+              <span data-stat-label="since">开始折腾</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧个人资料卡（装饰性内容较多，但「更多关于我」是可以点的） -->
+        <div class="hero-visual">
+          <div class="float-badge float-badge-top" aria-hidden="true">
+            <span class="badge-icon">
+              <svg viewBox="0 0 20 20" fill="none">
+                <rect x="3" y="3" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="11" y="3" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="3" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="11" y="11" width="6" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </span>
+            <span><strong data-stat="projects">06</strong> 个作品</span>
+          </div>
+
+          <div class="profile-window">
+            <div class="window-bar">
+              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window-file">pishen.profile.json</span>
+              <span class="window-live"><i aria-hidden="true"></i>LIVE</span>
+            </div>
+
+            <div class="window-body">
+              <div class="profile-row">
+                <img class="profile-avatar" src="assets/avatar.svg" alt="皮神的头像" width="72" height="72" data-avatar>
+                <div class="profile-name">
+                  <strong data-profile="name">皮神</strong>
+                  <span data-profile="role">独立开发者 / 前端工程师</span>
+                </div>
+                <span class="verified" title="本人" aria-label="本人">
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="m5.5 10 3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+
+              <div class="code-lines" aria-label="个人资料代码">
+                <div class="code-line"><span class="line-no">01</span><span><span class="tok-key">const</span> <span class="tok-name">me</span> <span class="tok-punc">=</span> <span class="tok-punc">{</span></span></div>
+                <div class="code-line"><span class="line-no">02</span><span class="code-indent"><span class="tok-prop">name</span><span class="tok-punc">:</span> <span class="tok-string">'<span data-profile="name">皮神</span>'</span><span class="tok-punc">,</span></span></div>
+                <div class="code-line"><span class="line-no">03</span><span class="code-indent"><span class="tok-prop">base</span><span class="tok-punc">:</span> <span class="tok-string">'<span data-profile="location">中国 · 远程</span>'</span><span class="tok-punc">,</span></span></div>
+                <div class="code-line"><span class="line-no">04</span><span class="code-indent"><span class="tok-prop">stack</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-string">'JS'</span><span class="tok-punc">,</span> <span class="tok-string">'Python'</span><span class="tok-punc">,</span> <span class="tok-string">'小程序'</span><span class="tok-punc">]</span><span class="tok-punc">,</span></span></div>
+                <div class="code-line"><span class="line-no">05</span><span class="code-indent"><span class="tok-prop">currently</span><span class="tok-punc">:</span> <span class="tok-string">'building stuff'</span></span></div>
+                <div class="code-line"><span class="line-no">06</span><span><span class="tok-punc">}</span></span></div>
+              </div>
+
+              <div class="profile-status">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span data-profile="status">正在打磨「天气小窗」2.0</span>
+              </div>
+
+              <a class="profile-link" href="about.html">
+                更多关于我
+                <span class="link-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="float-badge float-badge-bottom" aria-hidden="true">
+            <span class="badge-icon badge-icon-amber">
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="m7 6-4 4 4 4M13 6l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span><strong data-stat="opensource">04</strong> 个已开源</span>
+          </div>
+
+          <span class="visual-blob" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- ==================== 作品 ==================== -->
+    <section class="works section" id="works">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <p class="eyebrow">SELECTED WORKS</p>
+            <h2>一些做完了的小东西<span class="title-dot">.</span></h2>
+          </div>
+          <p class="section-desc">
+            从随手写的小工具，到认真上线的作品。每一个都解决了一个具体的小问题。
+          </p>
+        </div>
+
+        <!-- 分类按钮由 JS 根据 data.js 自动生成 -->
+        <div class="filters" role="group" aria-label="按类别筛选作品" data-filters></div>
+
+        <!-- 作品卡片由 JS 根据 data.js 自动生成 -->
+        <div class="project-grid" data-projects></div>
+
+        <div class="empty-state" data-empty hidden>
+          <span class="empty-icon" aria-hidden="true">◌</span>
+          <h3>这个分类还在装修</h3>
+          <p>换个分类看看，或者过阵子再来。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 联系 ==================== -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-panel">
+          <span class="panel-grid" aria-hidden="true"></span>
+          <span class="panel-orb panel-orb-one" aria-hidden="true"></span>
+          <span class="panel-orb panel-orb-two" aria-hidden="true"></span>
+
+          <div class="contact-copy">
+            <p class="eyebrow eyebrow-light">LET'S TALK</p>
+            <h2>有想法？一起聊聊。</h2>
+            <p>无论是合作、交流，还是单纯想打个招呼，我都很欢迎。</p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-white" href="mailto:hello@pishentech.cn" data-email-link>
+              写封邮件
+              <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 15 15 5M7 5h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button class="btn btn-outline-light" type="button" data-copy-email>复制邮箱</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="皮神科技首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
+        </a>
+        <p data-copy="footerTagline">用代码做一些小而美的东西。</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="页脚导航">
+        <span class="footer-label">逛逛</span>
+        <a href="index.html">首页</a>
+        <a href="index.html#works">作品</a>
+        <a href="about.html">关于</a>
+      </nav>
+
+      <div class="footer-contact">
+        <span class="footer-label">找我</span>
+        <a href="mailto:hello@pishentech.cn" data-email-link data-email-text>hello@pishentech.cn</a>
+        <a href="https://github.com/pishentech" target="_blank" rel="noopener noreferrer" data-github-link>github.com/pishentech</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> <span data-copy="copyright">皮神科技</span>. All rights reserved.</p>
+      <p class="footer-made">Made with <span aria-hidden="true">♥</span> &amp; too much coffee.</p>
+    </div>
+  </footer>
+
+  <!-- 操作提示（比如复制成功），平时隐藏 -->
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>

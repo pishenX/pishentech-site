@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="coverNoteTitle">
+  <title id="coverNoteTitle">纸间作品封面</title>
+  <defs>
+    <linearGradient id="noteBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4eddf"/>
+      <stop offset=".55" stop-color="#f8f3e9"/>
+      <stop offset="1" stop-color="#efe4d1"/>
+    </linearGradient>
+    <linearGradient id="noteWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#fdf9f1"/>
+    </linearGradient>
+    <filter id="noteShadow" x="-15%" y="-15%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#7b5b37" flood-opacity=".20"/>
+    </filter>
+    <filter id="noteActiveShadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#8e6a41" flood-opacity=".12"/>
+    </filter>
+    <pattern id="noteLines" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 28h28" fill="none" stroke="#b99d78" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#noteBg)"/>
+  <circle cx="1095" cy="90" r="230" fill="#ffffff" opacity=".30"/>
+  <circle cx="88" cy="690" r="210" fill="#e8cba4" opacity=".18"/>
+  <g stroke="#b08b60" opacity=".2" stroke-width="1.2" stroke-linecap="round">
+    <path d="M67 157c22 11 33 30 34 56"/>
+    <path d="M92 148c15 15 22 33 22 55"/>
+    <path d="M1120 604c-15 12-23 29-24 51"/>
+    <path d="M1144 614c-10 12-15 27-15 43"/>
+  </g>
+
+  <!-- 主窗口 -->
+  <g filter="url(#noteShadow)">
+    <rect x="95" y="82" width="1010" height="586" rx="26" fill="url(#noteWindow)" stroke="#e9dece" stroke-width="1.5"/>
+  </g>
+
+  <!-- 标题栏 -->
+  <path d="M95 108c0-14 11-26 26-26h958c15 0 26 12 26 26v38H95Z" fill="#f8f2e7"/>
+  <circle cx="125" cy="110" r="4.5" fill="#e7a58f"/>
+  <circle cx="142" cy="110" r="4.5" fill="#e5c078"/>
+  <circle cx="159" cy="110" r="4.5" fill="#a7c9a1"/>
+  <rect x="200" y="94" width="126" height="32" rx="8" fill="#fffdf8" stroke="#e8ddcc"/>
+  <path d="M215 105h9v10h-9z" fill="none" stroke="#8b745b" stroke-width="1.2"/>
+  <text x="232" y="114" fill="#5f4b37" font-size="9.5" font-family="'SFMono-Regular',Consolas,monospace">note.md</text>
+  <path d="m308 107 5 5m0-5-5 5" stroke="#b4a18b" stroke-width="1.2" stroke-linecap="round"/>
+  <g fill="none" stroke="#9d8871" stroke-width="1.3" stroke-linecap="round">
+    <path d="M988 104h14M988 110h14M988 116h9"/>
+    <path d="M1032 103v11M1027 108h10"/>
+    <circle cx="1067" cy="109" r="5"/>
+  </g>
+  <path d="M1098 103h7v7h-7zM1104 101h7v7" fill="none" stroke="#9d8871" stroke-width="1.2" stroke-linecap="round"/>
+  <text x="1094" y="118" fill="#9d8871" font-size="7" font-family="'SFMono-Regular',Consolas,monospace">···</text>
+
+  <!-- 左侧栏 -->
+  <rect x="95" y="146" width="242" height="522" fill="#f8f2e8"/>
+  <path d="M337 146v522" stroke="#eadfce"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="123" y="196" fill="#2f261d" font-size="27" font-weight="700" letter-spacing="-1">纸间</text>
+    <circle cx="184" cy="191" r="3.5" fill="#2563eb"/>
+    <text x="123" y="215" fill="#b09b84" font-size="8" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="2">PAPER NOTE</text>
+
+    <rect x="121" y="238" width="190" height="37" rx="9" fill="#2563eb"/>
+    <path d="M137 250v13M131 256h12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="153" y="261" fill="#ffffff" font-size="10.5" font-weight="600">新建一页</text>
+
+    <text x="123" y="303" fill="#a38d76" font-size="8" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="1.6">全部笔记 · 12</text>
+
+    <!-- 选中的笔记 -->
+    <g filter="url(#noteActiveShadow)">
+      <rect x="113" y="317" width="206" height="63" rx="10" fill="#ffffff" stroke="#eadfce"/>
+    </g>
+    <rect x="113" y="317" width="3" height="63" rx="1.5" fill="#2563eb"/>
+    <text x="129" y="339" fill="#3a2d20" font-size="11.5" font-weight="600">写给未来的自己</text>
+    <text x="129" y="356" fill="#a38d76" font-size="8.5">10 月 24 日 · 4 分钟阅读</text>
+    <text x="129" y="370" fill="#c0ad97" font-size="8"># 随笔　# 慢慢来</text>
+
+    <text x="129" y="411" fill="#6c5743" font-size="11">关于「慢」</text>
+    <text x="129" y="428" fill="#b29d87" font-size="8.5">10 月 18 日</text>
+    <path d="M123 441h188" stroke="#eee4d5"/>
+
+    <text x="129" y="464" fill="#6c5743" font-size="11">十月清单</text>
+    <text x="129" y="481" fill="#b29d87" font-size="8.5">10 月 09 日</text>
+    <path d="M123 494h188" stroke="#eee4d5"/>
+
+    <text x="129" y="517" fill="#6c5743" font-size="11">一个产品的诞生</text>
+    <text x="129" y="534" fill="#b29d87" font-size="8.5">09 月 27 日</text>
+    <path d="M123 547h188" stroke="#eee4d5"/>
+
+    <text x="129" y="570" fill="#6c5743" font-size="11">秋日读书笔记</text>
+    <text x="129" y="587" fill="#b29d87" font-size="8.5">09 月 12 日</text>
+
+    <path d="M123 612h188" stroke="#e7dccb"/>
+    <circle cx="132" cy="635" r="8" fill="#dbeafe"/>
+    <text x="132" y="638" fill="#2563eb" font-size="7" text-anchor="middle" font-weight="700">P</text>
+    <text x="147" y="638" fill="#8f7a64" font-size="9">皮神的笔记本</text>
+    <circle cx="301" cy="635" r="4" fill="#22c55e"/>
+    <text x="290" y="638" fill="#9d8871" font-size="7.5" text-anchor="end">已同步</text>
+  </g>
+
+  <!-- 编辑区顶部 -->
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="365" y="178" fill="#b3a08b" font-size="9" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="1.3">随笔 / 写给未来的自己</text>
+    <circle cx="1005" cy="175" r="3.5" fill="#22c55e"/>
+    <text x="1016" y="179" fill="#9d8a74" font-size="8.5">已保存</text>
+    <path d="M365 193h713" stroke="#eee4d6"/>
+
+    <!-- 工具栏 -->
+    <g fill="none" stroke="#a08a73" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M368 214h11M368 219h7"/>
+      <path d="M399 211v13M394 216h10"/>
+      <path d="M425 217h11M430.5 211.5v11"/>
+      <path d="M456 212h11v10h-11z"/>
+      <path d="m485 220 5-10 5 10M487 216h6"/>
+      <path d="M521 212v10M516 217h10"/>
+    </g>
+    <path d="M550 207v21" stroke="#eadfce"/>
+
+    <!-- 编辑正文 -->
+    <text x="365" y="263" fill="#2d241b" font-size="23" font-weight="700" letter-spacing="-.8">写给未来的自己</text>
+    <text x="365" y="291" fill="#b7a58f" font-size="9" font-family="'SFMono-Regular',Consolas,monospace">2026.10.24 · 杭州 · 晴</text>
+
+    <g fill="#6f5b47" font-size="11.8" line-height="1.9">
+      <text x="365" y="330">嘿，一年后的你：</text>
+      <text x="365" y="357">最近过得怎么样？有没有把那个一直</text>
+      <text x="365" y="378">想做的项目，认认真真地做完？</text>
+      <text x="365" y="410">我现在正在一个普通的周六下午，</text>
+      <text x="365" y="431">桌上有一杯凉掉的美式，窗外的树</text>
+      <text x="365" y="452">叶开始变黄。生活没有什么大事，</text>
+      <text x="365" y="473">但也不算太坏。</text>
+    </g>
+
+    <rect x="365" y="500" width="310" height="64" rx="8" fill="#f7f0e4"/>
+    <path d="M365 500v64" stroke="#2563eb" stroke-width="3"/>
+    <text x="382" y="524" fill="#5b4835" font-size="10.5" font-style="italic">“慢一点也没关系，只要还在往前走。”</text>
+    <text x="382" y="546" fill="#ae9a83" font-size="8.5">—— 这是现在的我最想告诉你的话</text>
+
+    <g fill="#75604b" font-size="11.2">
+      <text x="365" y="595">希望你仍然对世界好奇，仍然愿意为</text>
+      <text x="365" y="616">一个很小的细节反复修改。也希望你</text>
+      <text x="365" y="637">偶尔抬头，看看窗外的天气。</text>
+    </g>
+    <text x="365" y="663" fill="#b7a58f" font-size="8.5" font-family="'SFMono-Regular',Consolas,monospace">642 字 · 预计阅读 4 分钟</text>
+
+    <!-- 右侧预览 -->
+    <path d="M724 207v421" stroke="#eee4d6"/>
+    <text x="753" y="218" fill="#b3a08b" font-size="8" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="1.5">PREVIEW</text>
+    <rect x="748" y="233" width="304" height="394" rx="11" fill="#fffaf2" stroke="#eadfce"/>
+    <rect x="748" y="233" width="304" height="394" rx="11" fill="url(#noteLines)"/>
+
+    <text x="772" y="278" fill="#2d241b" font-size="20" font-weight="700" letter-spacing="-.6">写给未来的自己</text>
+    <text x="772" y="300" fill="#b7a58f" font-size="8" font-family="'SFMono-Regular',Consolas,monospace">2026.10.24 · HANGZHOU</text>
+    <path d="M772 314h256" stroke="#eadfce"/>
+
+    <g fill="#75604b" font-size="9.8">
+      <text x="772" y="342">嘿，一年后的你：</text>
+      <text x="772" y="363">最近过得怎么样？有没有把那个一直想做的</text>
+      <text x="772" y="381">项目，认认真真地做完？</text>
+      <text x="772" y="408">我现在正在一个普通的周六下午，桌上有一</text>
+      <text x="772" y="426">杯凉掉的美式，窗外的树叶开始变黄。</text>
+    </g>
+
+    <rect x="772" y="449" width="256" height="54" rx="7" fill="#f7f0e4"/>
+    <path d="M772 449v54" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="786" y="470" fill="#5b4835" font-size="8.8" font-style="italic">“慢一点也没关系，</text>
+    <text x="786" y="487" fill="#5b4835" font-size="8.8" font-style="italic">只要还在往前走。”</text>
+
+    <g fill="#75604b" font-size="9.8">
+      <text x="772" y="530">希望你仍然对世界好奇，仍然愿意为一个</text>
+      <text x="772" y="548">很小的细节反复修改。</text>
+    </g>
+    <text x="772" y="595" fill="#b7a58f" font-size="8" font-family="'SFMono-Regular',Consolas,monospace">642 WORDS · 4 MIN READ</text>
+    <circle cx="1018" cy="596" r="4" fill="#22c55e"/>
+  </g>
+
+  <text x="1130" y="716" text-anchor="end" fill="#a68e72" opacity=".75" font-family="'SFMono-Regular',Consolas,monospace" font-size="10" letter-spacing="2.4">PISHEN.TECH</text>
+</svg>

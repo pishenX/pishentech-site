@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="coverWeatherTitle">
+  <title id="coverWeatherTitle">天气小窗作品封面</title>
+  <defs>
+    <linearGradient id="weatherSky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9e5ff"/>
+      <stop offset=".48" stop-color="#e8f4ff"/>
+      <stop offset="1" stop-color="#fdf3d8"/>
+    </linearGradient>
+    <linearGradient id="weatherCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".94"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".78"/>
+    </linearGradient>
+    <radialGradient id="weatherSunGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="weatherShadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#2b5f9e" flood-opacity=".16"/>
+    </filter>
+    <filter id="weatherCloudShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#5c86b8" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#weatherSky)"/>
+
+  <!-- 背景装饰 -->
+  <circle cx="1060" cy="88" r="200" fill="#ffffff" opacity=".16"/>
+  <circle cx="1090" cy="112" r="120" fill="url(#weatherSunGlow)"/>
+  <circle cx="1090" cy="112" r="69" fill="#fbbf24"/>
+  <circle cx="1090" cy="112" r="56" fill="#fcd34d"/>
+  <g stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity=".45">
+    <path d="M1090 19v18M1090 187v18M997 112h18M1165 112h18M1024 46l13 13M1153 165l13 13M1156 46l-13 13M1024 178l13-13"/>
+  </g>
+
+  <g fill="#ffffff" opacity=".62" filter="url(#weatherCloudShadow)">
+    <path d="M94 139c12-33 58-35 72-4 24-8 46 9 40 31H72c-7-18 4-31 22-27Z"/>
+    <path d="M158 238c8-23 40-24 50-3 17-5 32 6 28 21h-91c-5-13 3-21 13-18Z" opacity=".7"/>
+  </g>
+  <g fill="#ffffff" opacity=".35">
+    <circle cx="76" cy="328" r="5"/>
+    <circle cx="103" cy="360" r="3"/>
+    <circle cx="1128" cy="311" r="6"/>
+    <circle cx="1152" cy="286" r="3"/>
+  </g>
+
+  <!-- 主界面卡片 -->
+  <g filter="url(#weatherShadow)">
+    <rect x="95" y="86" width="1010" height="584" rx="38" fill="url(#weatherCard)" stroke="#ffffff" stroke-opacity=".9" stroke-width="2"/>
+  </g>
+
+  <!-- 卡片顶部 -->
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <circle cx="151" cy="133" r="5" fill="#2563eb"/>
+    <text x="169" y="141" fill="#0e2a4f" font-size="25" font-weight="700" letter-spacing=".5">天气小窗</text>
+    <text x="169" y="164" fill="#8ba2ba" font-size="10" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="3.2">WEATHER WINDOW</text>
+
+    <rect x="860" y="112" width="200" height="43" rx="21.5" fill="#eef6ff" stroke="#d8eafb"/>
+    <path d="M883 141c0-8 6-14 14-14 7 0 12 4 13 10 6-1 11 3 11 9 0 6-4 9-10 9h-25c-7 0-11-5-11-10 0-5 3-9 8-10Z" fill="none" stroke="#5d8fc4" stroke-width="1.8" stroke-linejoin="round"/>
+    <text x="925" y="139" fill="#46739f" font-size="12.5">杭州市 · 西湖区</text>
+
+    <!-- 主温度 -->
+    <text x="144" y="326" fill="#0e2a4f" font-size="150" font-weight="700" letter-spacing="-9">26<tspan fill="#3b82f6" font-size="82" dy="-58">°</tspan></text>
+    <text x="431" y="257" fill="#17375c" font-size="31" font-weight="700">多云转晴</text>
+    <text x="433" y="290" fill="#7b93ad" font-size="13">体感 27° · 东南风 2 级 · 湿度 58%</text>
+    <rect x="432" y="309" width="92" height="27" rx="13.5" fill="#eaf7ef"/>
+    <circle cx="448" cy="322" r="4" fill="#22c55e"/>
+    <text x="460" y="327" fill="#2c8a58" font-size="11">空气优 32</text>
+
+    <!-- 右侧天气插画 -->
+    <g>
+      <circle cx="909" cy="253" r="90" fill="#fef3c7" opacity=".45"/>
+      <circle cx="909" cy="253" r="61" fill="#fbbf24"/>
+      <circle cx="909" cy="253" r="49" fill="#fcd34d"/>
+      <g stroke="#fbbf24" stroke-width="7" stroke-linecap="round" opacity=".6">
+        <path d="M909 164v-14M909 356v-14M820 253h-14M1012 253h-14M846 190l-10-10M982 316l-10-10M982 190l10-10M846 316l10-10"/>
+      </g>
+      <path d="M902 270c9-26 45-28 56-3 19-6 35 7 31 24h-99c-5-14 2-23 12-21Z" fill="#ffffff" opacity=".93" filter="url(#weatherCloudShadow)"/>
+    </g>
+
+    <!-- 分隔线 -->
+    <path d="M145 391h910" stroke="#e2edf9" stroke-width="1.5"/>
+    <text x="145" y="425" fill="#93a6bc" font-size="10.5" letter-spacing="2.2" font-family="'SFMono-Regular',Consolas,monospace">未来 5 天</text>
+
+    <!-- 五天预报 -->
+    <g text-anchor="middle">
+      <!-- 今天 -->
+      <text x="302" y="466" fill="#3b5878" font-size="13" font-weight="600">今天</text>
+      <circle cx="302" cy="505" r="17" fill="#fbbf24"/>
+      <g stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity=".55">
+        <path d="M302 480v-6M302 530v-6M277 505h-6M327 505h-6M284 487l-4-4M324 523l-4-4M320 487l4-4M284 523l-4 4"/>
+      </g>
+      <text x="302" y="565" fill="#294765" font-size="15" font-weight="600">27° <tspan fill="#9aadc1" font-weight="400">/ 18°</tspan></text>
+
+      <!-- 明天 -->
+      <text x="482" y="466" fill="#7088a1" font-size="12.5">明天</text>
+      <circle cx="470" cy="499" r="14" fill="#fbbf24" opacity=".9"/>
+      <path d="M462 508c5-14 24-15 30-2 10-3 19 4 17 13h-54c-3-8 1-13 7-11Z" fill="#dbeafe"/>
+      <text x="482" y="565" fill="#294765" font-size="15" font-weight="600">29° <tspan fill="#9aadc1" font-weight="400">/ 19°</tspan></text>
+
+      <!-- 周三 -->
+      <text x="662" y="466" fill="#7088a1" font-size="12.5">周三</text>
+      <path d="M639 503c7-19 33-20 41-3 14-4 26 6 23 18h-72c-4-11 1-17 8-15Z" fill="#cbdff4"/>
+      <g stroke="#7aa5cc" stroke-width="3" stroke-linecap="round">
+        <path d="M650 529l-2 7M664 529l-2 7M678 529l-2 7"/>
+      </g>
+      <text x="662" y="565" fill="#294765" font-size="15" font-weight="600">24° <tspan fill="#9aadc1" font-weight="400">/ 17°</tspan></text>
+
+      <!-- 周四 -->
+      <text x="842" y="466" fill="#7088a1" font-size="12.5">周四</text>
+      <circle cx="830" cy="499" r="14" fill="#fbbf24" opacity=".9"/>
+      <path d="M822 508c5-14 24-15 30-2 10-3 19 4 17 13h-54c-3-8 1-13 7-11Z" fill="#dbeafe"/>
+      <text x="842" y="565" fill="#294765" font-size="15" font-weight="600">28° <tspan fill="#9aadc1" font-weight="400">/ 20°</tspan></text>
+
+      <!-- 周五 -->
+      <text x="1022" y="466" fill="#7088a1" font-size="12.5">周五</text>
+      <circle cx="1022" cy="505" r="17" fill="#fbbf24"/>
+      <g stroke="#fbbf24" stroke-width="3" stroke-linecap="round" opacity=".55">
+        <path d="M1022 480v-6M1022 530v-6M997 505h-6M1047 505h-6M1004 487l-4-4M1044 523l-4-4M1040 487l4-4M1004 523l-4 4"/>
+      </g>
+      <text x="1022" y="565" fill="#294765" font-size="15" font-weight="600">30° <tspan fill="#9aadc1" font-weight="400">/ 20°</tspan></text>
+    </g>
+
+    <rect x="145" y="596" width="910" height="44" rx="22" fill="#f0f7ff" stroke="#e0eefb"/>
+    <path d="M171 618h8M175 610v8" stroke="#5b8dc2" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="193" y="623" fill="#5d7e9e" font-size="11.5">今天紫外线不强，适合出门走走。傍晚 6 点后可能有小雨，记得带伞。</text>
+  </g>
+
+  <text x="1130" y="716" text-anchor="end" fill="#7d95ad" opacity=".65" font-family="'SFMono-Regular',Consolas,monospace" font-size="10" letter-spacing="2.4">PISHEN.TECH</text>
+</svg>

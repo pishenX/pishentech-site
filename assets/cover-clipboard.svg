@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="coverClipboardTitle">
+  <title id="coverClipboardTitle">剪贴板管家作品封面</title>
+  <defs>
+    <linearGradient id="clipBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071225"/>
+      <stop offset=".55" stop-color="#0a1730"/>
+      <stop offset="1" stop-color="#0d2144"/>
+    </linearGradient>
+    <linearGradient id="clipWindow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b36"/>
+      <stop offset="1" stop-color="#09162c"/>
+    </linearGradient>
+    <linearGradient id="clipAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="clipGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#2563eb" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="clipShadow" x="-15%" y="-15%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#000" flood-opacity=".48"/>
+    </filter>
+    <filter id="clipSelectedGlow" x="-10%" y="-30%" width="120%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2563eb" flood-opacity=".25"/>
+    </filter>
+    <pattern id="clipGrid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0v42" fill="none" stroke="#93c5fd" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#clipBg)"/>
+  <rect width="1200" height="750" fill="url(#clipGrid)"/>
+  <circle cx="1000" cy="80" r="310" fill="url(#clipGlow)"/>
+  <circle cx="160" cy="700" r="280" fill="#0891b2" opacity=".07"/>
+  <g fill="#60a5fa" opacity=".22">
+    <circle cx="76" cy="126" r="3"/>
+    <circle cx="108" cy="98" r="2"/>
+    <circle cx="1135" cy="640" r="3"/>
+    <circle cx="1100" cy="676" r="2"/>
+  </g>
+
+  <!-- 主窗口 -->
+  <g filter="url(#clipShadow)">
+    <rect x="95" y="86" width="1010" height="580" rx="27" fill="url(#clipWindow)" stroke="#233b60" stroke-width="1.5"/>
+  </g>
+
+  <!-- 标题栏 -->
+  <path d="M95 113c0-15 12-27 27-27h956c15 0 27 12 27 27v32H95Z" fill="#101f3c"/>
+  <circle cx="126" cy="115" r="4.5" fill="#fb7185"/>
+  <circle cx="143" cy="115" r="4.5" fill="#fbbf24"/>
+  <circle cx="160" cy="115" r="4.5" fill="#34d399"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="187" y="101" width="26" height="26" rx="7" fill="url(#clipAccent)"/>
+    <path d="M195 107h10v3h-4v9h-2v-9h-4Z" fill="#fff" opacity=".9"/>
+    <text x="224" y="119" fill="#e2e8f0" font-size="12.5" font-weight="600">剪贴板管家</text>
+    <text x="317" y="118" fill="#6580a5" font-size="8" font-family="'SFMono-Regular',Consolas,monospace" letter-spacing="1.4">CLIPBOARD KEEPER</text>
+  </g>
+  <rect x="891" y="101" width="132" height="27" rx="8" fill="#0b1730" stroke="#2a4062"/>
+  <text x="957" y="119" fill="#7e99bc" font-size="9" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">Ctrl + Shift + V</text>
+  <circle cx="1052" cy="114" r="10" fill="#16294a"/>
+  <path d="M1046 113h11M1052 108v11" stroke="#8ba5c7" stroke-width="1.3" stroke-linecap="round" opacity=".8"/>
+  <circle cx="1079" cy="114" r="10" fill="#16294a"/>
+  <path d="M1075 110h8v8h-8z" fill="none" stroke="#8ba5c7" stroke-width="1.2" opacity=".8"/>
+
+  <!-- 侧边栏 -->
+  <rect x="95" y="145" width="214" height="521" fill="#081428"/>
+  <path d="M309 145v521" stroke="#1b3050"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="120" y="177" width="36" height="36" rx="10" fill="url(#clipAccent)"/>
+    <path d="M131 188h14v3h-5v12h-4v-12h-5Z" fill="#fff" opacity=".92"/>
+    <text x="168" y="190" fill="#dbe7f5" font-size="12" font-weight="600">剪贴板管家</text>
+    <text x="168" y="206" fill="#4e688c" font-size="8" font-family="'SFMono-Regular',Consolas,monospace">v1.2.0 · LOCAL</text>
+  </g>
+
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11">
+    <rect x="112" y="239" width="180" height="38" rx="9" fill="#173463" stroke="#2f5b96"/>
+    <path d="M130 251h9v10h-9zM133 249h3v3M127 255h15M127 258h15" fill="none" stroke="#93c5fd" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="150" y="263" fill="#dbeafe" font-weight="600">全部记录</text>
+    <rect x="258" y="250" width="23" height="17" rx="5" fill="#2f5b96"/>
+    <text x="269.5" y="262" fill="#c7ddff" font-size="8" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">128</text>
+
+    <path d="M130 294h9v10h-9zM133 292h3v3" fill="none" stroke="#6482a7" stroke-width="1.3" stroke-linecap="round"/>
+    <text x="150" y="306" fill="#7791b3">收藏夹</text>
+    <text x="269" y="306" fill="#536d8f" font-size="8" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">12</text>
+
+    <path d="M127 335h14v12h-14zM139 339l4-4v10" fill="none" stroke="#6482a7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="347" fill="#7791b3">图片</text>
+
+    <path d="m129 376 4 4-4 4M136 384h9" fill="none" stroke="#6482a7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="150" y="388" fill="#7791b3">代码片段</text>
+
+    <path d="M131 416h2v10h-2zM127 416h10M128 421h8" fill="none" stroke="#6482a7" stroke-width="1.2" stroke-linecap="round"/>
+    <text x="150" y="426" fill="#7791b3">文本</text>
+  </g>
+
+  <path d="M119 454h166" stroke="#192d4b"/>
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="10.5">
+    <text x="130" y="480" fill="#5f7a9e">标签</text>
+    <circle cx="133" cy="501" r="3.5" fill="#38bdf8"/>
+    <text x="144" y="505" fill="#829bb9">工作</text>
+    <circle cx="133" cy="526" r="3.5" fill="#fbbf24"/>
+    <text x="144" y="530" fill="#829bb9">灵感</text>
+    <circle cx="133" cy="551" r="3.5" fill="#fb7185"/>
+    <text x="144" y="555" fill="#829bb9">稍后读</text>
+  </g>
+
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <rect x="112" y="593" width="180" height="49" rx="10" fill="#0c1b33" stroke="#1c3454"/>
+    <text x="127" y="612" fill="#6a84a6" font-size="9">本地存储</text>
+    <text x="276" y="612" fill="#7e99bc" font-size="8" text-anchor="end" font-family="'SFMono-Regular',Consolas,monospace">18.4 MB</text>
+    <rect x="127" y="621" width="149" height="4" rx="2" fill="#1c3150"/>
+    <rect x="127" y="621" width="64" height="4" rx="2" fill="#3b82f6"/>
+  </g>
+
+  <!-- 主区域 -->
+  <g font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+    <text x="337" y="177" fill="#d8e5f6" font-size="15" font-weight="600">历史记录</text>
+    <text x="337" y="196" fill="#5f7a9e" font-size="9.5">所有复制过的内容，都会安静地留在这里。</text>
+
+    <rect x="337" y="216" width="508" height="42" rx="11" fill="#0a1830" stroke="#223a5e"/>
+    <circle cx="358" cy="236" r="6" fill="none" stroke="#6684a9" stroke-width="1.5"/>
+    <path d="m363 241 5 5" stroke="#6684a9" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="379" y="240" fill="#536d8f" font-size="10">搜索链接、代码或文字...</text>
+    <rect x="809" y="222" width="26" height="20" rx="5" fill="#152a49"/>
+    <text x="822" y="236" fill="#5f7a9e" font-size="7.5" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">⌘K</text>
+
+    <rect x="865" y="216" width="97" height="42" rx="11" fill="#10233f" stroke="#263f62"/>
+    <path d="M883 232h8M885 238h12" stroke="#829bb9" stroke-width="1.2" stroke-linecap="round"/>
+    <text x="913" y="241" fill="#93a9c3" font-size="9.5" text-anchor="middle">清空记录</text>
+
+    <!-- 过滤条 -->
+    <g font-size="9">
+      <rect x="337" y="274" width="52" height="25" rx="7" fill="#1d4ed8"/>
+      <text x="363" y="290" fill="#e6efff" text-anchor="middle" font-weight="600">全部 128</text>
+      <rect x="397" y="274" width="42" height="25" rx="7" fill="#0e203b" stroke="#223a5e"/>
+      <text x="418" y="290" fill="#7791b3" text-anchor="middle">链接</text>
+      <rect x="447" y="274" width="42" height="25" rx="7" fill="#0e203b" stroke="#223a5e"/>
+      <text x="468" y="290" fill="#7791b3" text-anchor="middle">代码</text>
+      <rect x="497" y="274" width="42" height="25" rx="7" fill="#0e203b" stroke="#223a5e"/>
+      <text x="518" y="290" fill="#7791b3" text-anchor="middle">图片</text>
+      <rect x="547" y="274" width="42" height="25" rx="7" fill="#0e203b" stroke="#223a5e"/>
+      <text x="568" y="290" fill="#7791b3" text-anchor="middle">文字</text>
+      <text x="962" y="290" fill="#536d8f" font-size="8" text-anchor="end" font-family="'SFMono-Regular',Consolas,monospace">SORTED BY TIME ↓</text>
+    </g>
+
+    <!-- 第一条：链接，选中状态 -->
+    <g filter="url(#clipSelectedGlow)">
+      <rect x="337" y="315" width="743" height="88" rx="13" fill="#10284c" stroke="#2f6cc0" stroke-width="1.3"/>
+    </g>
+    <rect x="352" y="331" width="36" height="22" rx="6" fill="#1b4c91"/>
+    <text x="370" y="346" fill="#bfdbfe" font-size="8" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">LINK</text>
+    <text x="400" y="346" fill="#e2e8f0" font-size="12" font-weight="500" font-family="'SFMono-Regular',Consolas,monospace">https://pishentech.cn/projects/weather</text>
+    <text x="352" y="374" fill="#6482a7" font-size="8.5">刚刚复制 · 2.4 KB · 来自 Chrome</text>
+    <circle cx="1004" cy="342" r="13" fill="#173463"/>
+    <path d="M998 338h8v8h-8zM1001 335h8v8" fill="none" stroke="#93c5fd" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="1040" cy="342" r="13" fill="#173463"/>
+    <path d="m1035 342 3 3 6-7" fill="none" stroke="#86efac" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M352 386h713" stroke="#1b3a61"/>
+    <text x="352" y="396" fill="#5f7a9e" font-size="7.5" font-family="'SFMono-Regular',Consolas,monospace">PINNED · WEATHER · DAY 03</text>
+
+    <!-- 第二条：代码 -->
+    <rect x="337" y="414" width="743" height="82" rx="13" fill="#0c1b33" stroke="#1c3454"/>
+    <rect x="352" y="430" width="42" height="22" rx="6" fill="#3a2a58"/>
+    <text x="373" y="445" fill="#d8b4fe" font-size="8" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">CODE</text>
+    <text x="407" y="445" fill="#c7d6e8" font-size="11.5" font-family="'SFMono-Regular',Consolas,monospace">const idea = await buildSomething();</text>
+    <text x="352" y="473" fill="#58769b" font-size="8.5">2 分钟前 · 486 B · 来自 VS Code</text>
+    <circle cx="1040" cy="438" r="13" fill="#132a4a"/>
+    <path d="M1035 432h10v10h-10z" fill="none" stroke="#7791b3" stroke-width="1.1"/>
+
+    <!-- 第三条：图片 -->
+    <rect x="337" y="507" width="743" height="82" rx="13" fill="#0c1b33" stroke="#1c3454"/>
+    <rect x="352" y="523" width="50" height="22" rx="6" fill="#153f42"/>
+    <text x="377" y="538" fill="#99f6e4" font-size="8" text-anchor="middle" font-family="'SFMono-Regular',Consolas,monospace">IMAGE</text>
+    <rect x="352" y="553" width="34" height="24" rx="4" fill="#183a5e"/>
+    <circle cx="362" cy="560" r="3" fill="#fbbf24"/>
+    <path d="m354 573 9-8 6 5 5-4 9 7Z" fill="#3b82f6" opacity=".8"/>
+    <text x="398" y="545" fill="#e2e8f0" font-size="11.5">Screenshot 2026-10-24 at 18.32.08.png</text>
+    <text x="398" y="567" fill="#58769b" font-size="8.5">昨天 · 1.8 MB · 来自系统截图</text>
+    <circle cx="1040" cy="545" r="13" fill="#132a4a"/>
+    <path d="M1035 539h10v10h-10z" fill="none" stroke="#7791b3" stroke-width="1.1"/>
+
+    <!-- 底部状态 -->
+    <circle cx="346" cy="624" r="3" fill="#22c55e"/>
+    <text x="356" y="628" fill="#5f7a9e" font-size="9">共 128 条记录 · 全部保存在本地 · 不上传云端</text>
+    <text x="1065" y="628" fill="#536d8f" font-size="8" text-anchor="end" font-family="'SFMono-Regular',Consolas,monospace">⌘ + ⇧ + V TO OPEN</text>
+  </g>
+
+  <g opacity=".6">
+    <text x="1130" y="716" text-anchor="end" fill="#7190b6" font-family="'SFMono-Regular',Consolas,monospace" font-size="10" letter-spacing="2.4">PISHEN.TECH</text>
+  </g>
+</svg>
