@@ -36,14 +36,12 @@ pishentech-site/
 ├── index.html          ← 作品列表
 ├── 404.html            ← 找不到页面时显示
 ├── zhihuishu/
-│   └── index.html      ← 智慧树学习助手详情页
+│   └── index.html      ← 智慧树学习助手：使用方法和 API Key 配置
 ├── css/
-│   ├── style.css       ← 颜色、圆角、卡片、手机布局
-│   └── zhihuishu.css   ← 详情页专用样式
+│   └── style.css       ← 颜色、圆角、卡片、手机布局
 ├── js/
 │   ├── data.js         ← ★ 最常改：作品、邮箱、GitHub
-│   ├── site.js         ← 交互：卡片点击（一般别动）
-│   └── zhihuishu.js    ← 详情页的终端演示
+│   └── site.js         ← 交互：卡片点击（一般别动）
 ├── assets/
 │   ├── cover-zhihuishu.svg        ← 详情页作品封面
 │   └── downloads/
@@ -161,14 +159,12 @@ download: true
 这次除了首页卡片，还新增了一个独立详情页：
 
 - 页面：`zhihuishu/index.html`
-- 样式：`css/zhihuishu.css`
-- 终端演示：`js/zhihuishu.js`
 - 封面：`assets/cover-zhihuishu.svg`
 - 下载包：`assets/downloads/zhihuishu-helper.zip`
 
-首页卡片在 `js/data.js` 的 `projects` 列表里，`id` 是 `zhihuishu-helper`，点击后进入 `zhihuishu/`。
+详情页只保留“使用方法”和“API Key 配置”，样式直接写在这个 HTML 文件里，不再单独引用 CSS 或 JS。
 
-下载包内不包含任何 API Key。以后更新 ZIP 后，记得把 `zhihuishu/index.html` 底部的 SHA-256 一起换掉（用 `Get-FileHash 文件 -Algorithm SHA256` 计算）。
+首页卡片在 `js/data.js` 的 `projects` 列表里，`id` 是 `zhihuishu-helper`，点击后进入 `zhihuishu/`。下载包内不包含任何 API Key。
 
 ---
 
@@ -212,8 +208,6 @@ download: true
 ### 这次新增“智慧树”详情页需要上传
 
 - `zhihuishu/index.html`
-- `css/zhihuishu.css`
-- `js/zhihuishu.js`
 - `js/data.js`（新增卡片）
 - `assets/cover-zhihuishu.svg`
 - `assets/downloads/zhihuishu-helper.zip`

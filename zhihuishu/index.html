@@ -3,31 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="智慧树学习助手：自动播放课程视频、处理随堂练习、跳过章节测试，并在视频结束后继续下一节。Windows 本地工具。">
+  <meta name="description" content="智慧树学习助手的使用方法和 API Key 配置说明。">
   <meta name="author" content="皮神">
   <meta name="theme-color" content="#f6f8fc">
   <link rel="canonical" href="https://pishentech.cn/zhihuishu/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="皮神科技">
-  <meta property="og:title" content="智慧树学习助手 · 皮神科技">
-  <meta property="og:description" content="把重复的播放、暂停、切下一节交给本机脚本。">
-  <meta property="og:url" content="https://pishentech.cn/zhihuishu/">
-  <title>智慧树学习助手 · 皮神科技</title>
+  <title>使用说明 · 智慧树学习助手</title>
 
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/zhihuishu.css">
 
-  <script src="../js/data.js" defer></script>
-  <script src="../js/site.js" defer></script>
-  <script src="../js/zhihuishu.js" defer></script>
+  <style>
+    .doc-page {
+      min-height: 100vh;
+      background: var(--bg);
+    }
+
+    .doc-header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .78);
+      backdrop-filter: blur(14px);
+    }
+
+    .doc-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+    }
+
+    .doc-back {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    .doc-back:hover {
+      color: var(--blue-dark);
+    }
+
+    .doc-main {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 64px 28px 96px;
+    }
+
+    .doc-kicker {
+      margin: 0 0 14px;
+      color: var(--blue);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+
+    .doc-main h1 {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.05em;
+      line-height: 1.2;
+    }
+
+    .doc-lead {
+      max-width: 680px;
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .doc-download {
+      margin: 0 0 48px;
+    }
+
+    .doc-main h2 {
+      margin: 44px 0 14px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 750;
+      letter-spacing: -.025em;
+    }
+
+    .doc-main p,
+    .doc-main li {
+      color: var(--ink-2);
+      font-size: 14.5px;
+      line-height: 1.9;
+    }
+
+    .doc-main p {
+      margin: 0 0 14px;
+    }
+
+    .doc-main ol {
+      margin: 0 0 18px;
+      padding-left: 24px;
+    }
+
+    .doc-main li {
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    .doc-main code {
+      padding: 1px 5px;
+      border-radius: 4px;
+      background: var(--blue-pale);
+      color: var(--blue-dark);
+      font-family: var(--font-mono);
+      font-size: .9em;
+    }
+
+    .doc-main pre {
+      overflow-x: auto;
+      margin: 16px 0 20px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #0b1220;
+      color: #dbeafe;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      line-height: 1.75;
+    }
+
+    .doc-main pre code {
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font-size: inherit;
+    }
+
+    .doc-note {
+      margin: 18px 0 0;
+      padding-left: 12px;
+      border-left: 2px solid #c7d9f7;
+      color: var(--muted) !important;
+      font-size: 12.5px !important;
+    }
+
+    .doc-footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+      color: var(--muted-2);
+      font-family: var(--font-mono);
+      font-size: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .doc-main {
+        padding-top: 42px;
+        padding-bottom: 68px;
+      }
+
+      .doc-header-inner {
+        min-height: 64px;
+      }
+
+      .doc-main h2 {
+        margin-top: 36px;
+      }
+    }
+  </style>
 </head>
 
-<body class="tool-page">
-  <a class="skip-link" href="#main">跳到主要内容</a>
-
-  <header class="site-header" data-header>
-    <div class="container header-inner">
+<body class="doc-page">
+  <header class="doc-header">
+    <div class="container doc-header-inner">
       <a class="brand" href="../index.html#works" aria-label="返回皮神科技作品页">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" fill="none">
@@ -36,332 +185,57 @@
         </span>
         <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
       </a>
-
-      <div class="header-actions">
-        <a class="btn btn-ghost btn-sm header-contact" href="mailto:pishen2007@163.com" data-email-link>
-          联系我
-          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M5 15 15 5M7 5h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
+      <a class="doc-back" href="../index.html#works">← 返回作品</a>
     </div>
   </header>
 
-  <main id="main">
-    <!-- ==================== Hero ==================== -->
-    <section class="tool-hero">
-      <div class="container tool-hero-grid">
-        <div class="tool-hero-copy">
-          <a class="tool-back" href="../index.html#works">
-            <span aria-hidden="true">←</span> 返回作品
-          </a>
+  <main class="doc-main">
+    <p class="doc-kicker">WINDOWS 本地工具</p>
+    <h1>智慧树学习助手</h1>
+    <p class="doc-lead">
+      下载后解压，在 Edge 已登录智慧树的电脑上运行。下面的内容只有使用方法和 API Key 配置。
+    </p>
 
-          <div class="eyebrow tool-eyebrow"><span class="eyebrow-dot"></span> WINDOWS DESKTOP TOOL</div>
-          <h1 class="tool-title">智慧树<br><span>学习助手</span><span class="title-dot">.</span></h1>
-          <p class="tool-lead">
-            自动播放课程视频、处理随堂练习、跳过章节测试，并在视频结束后继续下一节。
-            把重复的播放、暂停和切下一节交给本机脚本。
-          </p>
+    <p class="doc-download">
+      <a class="btn btn-primary" href="../assets/downloads/zhihuishu-helper.zip" download>下载 ZIP（约 12 KB）</a>
+    </p>
 
-          <div class="tool-actions">
-            <a class="btn btn-primary" href="../assets/downloads/zhihuishu-helper.zip" download>
-              <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M10 3v10m0 0 4-4m-4 4-4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              下载 Windows 版
-            </a>
-            <a class="btn btn-ghost" href="#how">查看使用方法</a>
-          </div>
+    <h2>使用方法</h2>
+    <ol>
+      <li>下载 ZIP，解压到任意文件夹，不要在压缩包里直接运行。</li>
+      <li>用 Microsoft Edge 打开智慧树课程页面并登录，确认能看到视频和左侧章节目录。</li>
+      <li>双击解压目录里的 <code>Start-Helper.cmd</code>。</li>
+      <li>程序会打印当前章节并自动播放。保持智慧树标签页打开，Edge 可以最小化。</li>
+      <li>需要停止时，在程序窗口按 <code>Ctrl+C</code>。</li>
+    </ol>
+    <p class="doc-note">
+      章节测试只会跳过，不会进入、选择或提交；平台如果强制要求先完成测试才解锁下一章，需要手动完成测试。
+    </p>
 
-          <div class="tool-meta">
-            <span>v1.0.0</span>
-            <i aria-hidden="true"></i>
-            <span>约 12 KB</span>
-            <i aria-hidden="true"></i>
-            <span>Windows 10 / 11</span>
-            <i aria-hidden="true"></i>
-            <span>免安装</span>
-          </div>
-
-          <p class="tool-disclaimer">
-            仅用于测试课程和学习辅助。程序不会进入、不会提交章节测试，也不绕过人脸识别或监考。
-          </p>
-        </div>
-
-        <div class="tool-terminal-wrap">
-          <div class="tool-terminal" data-terminal>
-            <div class="tool-terminal-bar">
-              <span class="tool-terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="tool-terminal-title">PowerShell — 智慧树助手</span>
-              <button class="tool-terminal-replay" type="button" data-demo-replay>重播演示</button>
-            </div>
-
-            <div class="tool-terminal-body" aria-label="程序运行状态演示">
-              <p class="term-line term-muted" data-term-line>PS D:\ZhihuishuHelper&gt; .\Start-Helper.cmd</p>
-              <p class="term-line" data-term-line><span class="term-time">[21:30:01]</span> <span class="term-ok">已连接：智慧树 - Microsoft Edge</span></p>
-              <p class="term-line" data-term-line><span class="term-time">[21:30:02]</span> 当前小节：3.3.2</p>
-              <p class="term-line" data-term-line><span class="term-time">[21:30:04]</span> <span class="term-blue">视频状态：playing</span></p>
-              <p class="term-line" data-term-line><span class="term-time">[21:32:18]</span> 视频播放结束，准备进入下一节...</p>
-              <p class="term-line" data-term-line><span class="term-time">[21:32:21]</span> <span class="term-warn">跳过章节测试（不进入、不提交）</span></p>
-              <p class="term-line" data-term-line><span class="term-time">[21:32:23]</span> <span class="term-ok">已进入：4.1</span><span class="term-caret" aria-hidden="true"></span></p>
-            </div>
-
-            <div class="tool-terminal-foot">
-              <span class="tool-live"><i aria-hidden="true"></i> 本地运行</span>
-              <span>原速播放 · 自动续节 · 日志留存</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 为什么是下载页 ==================== -->
-    <section class="tool-section tool-why">
-      <div class="container">
-        <div class="tool-why-card">
-          <div class="tool-why-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="4" width="18" height="15" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M3 9h18M7 14h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="m15.5 14 2 2 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <h2>为什么不是纯网页版？</h2>
-            <p>
-              浏览器安全策略不允许一个网页读取或控制另一个标签页里的智慧树页面，也不能模拟 Windows 桌面点击。
-              所以自动播放、随堂练习和续节必须作为本机程序运行；这个页面负责下载、说明和版本更新。
-            </p>
-          </div>
-          <span class="tool-why-tag">LOCAL FIRST</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 功能 ==================== -->
-    <section class="tool-section" id="features">
-      <div class="container">
-        <div class="section-head tool-section-head">
-          <div>
-            <div class="eyebrow"><span class="eyebrow-dot"></span> WHAT IT DOES</div>
-            <h2>把重复操作收进后台<span class="title-dot">.</span></h2>
-          </div>
-          <p class="section-desc">它不是刷课平台的替代品，只是一个减少重复点击的本地小工具。</p>
-        </div>
-
-        <div class="tool-feature-grid">
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="m9 7 8 5-8 5V7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/></svg>
-            </span>
-            <h3>自动播放</h3>
-            <p>识别当前视频，点击播放；暂停后自动恢复，视频结束自动进入下一节。</p>
-          </article>
-
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h7M7 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/></svg>
-            </span>
-            <h3>随堂练习</h3>
-            <p>检测题目和选项。配置 API Key 可自动作答；不配置则在控制台手动选择。</p>
-          </article>
-
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M15 8l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 6v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            <h3>跳过章节测试</h3>
-            <p>遇到测试直接跳过，不进入、不选择、不提交，尝试下一章内容。</p>
-          </article>
-
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            <h3>卡住重试</h3>
-            <p>视频结束后如果没有成功切换，会等待、确认并重试，不再一直停在“已播放完”。</p>
-          </article>
-
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M4 9h16M9 4v16" stroke="currentColor" stroke-width="1.5"/><path d="m13 14 2 2 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <h3>标签页恢复</h3>
-            <p>Edge 最小化或切换到其他标签页后，会自动恢复窗口并切回智慧树。</p>
-          </article>
-
-          <article class="tool-feature">
-            <span class="tool-feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6V3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3v5h5M9 12h7M9 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            <h3>本地日志</h3>
-            <p>每次运行、每次跳转、每次答题都写入本地日志，出问题可以直接定位。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 使用步骤 ==================== -->
-    <section class="tool-section tool-how" id="how">
-      <div class="container">
-        <div class="section-head tool-section-head">
-          <div>
-            <div class="eyebrow"><span class="eyebrow-dot"></span> GET STARTED</div>
-            <h2>四步开始<span class="title-dot">.</span></h2>
-          </div>
-          <p class="section-desc">不需要安装 Node、Python 或任何运行库，Windows 自带的 PowerShell 就够。</p>
-        </div>
-
-        <div class="tool-step-grid">
-          <article class="tool-step">
-            <span class="tool-step-num">01</span>
-            <h3>下载并解压</h3>
-            <p>下载 ZIP，解压到任意文件夹。不要在压缩包内直接双击运行。</p>
-          </article>
-          <article class="tool-step">
-            <span class="tool-step-num">02</span>
-            <h3>登录课程</h3>
-            <p>用 Microsoft Edge 打开智慧树课程页并登录，确认能看到视频和左侧目录。</p>
-          </article>
-          <article class="tool-step">
-            <span class="tool-step-num">03</span>
-            <h3>双击启动</h3>
-            <p>双击 <code>Start-Helper.cmd</code>。程序会打印当前章节和视频状态。</p>
-          </article>
-          <article class="tool-step">
-            <span class="tool-step-num">04</span>
-            <h3>保持页面打开</h3>
-            <p>Edge 可以最小化，但不要关闭智慧树标签页。需要停止时按 Ctrl+C。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 能力边界 ==================== -->
-    <section class="tool-section">
-      <div class="container">
-        <div class="tool-boundary-grid">
-          <article class="tool-boundary tool-boundary-do">
-            <div class="eyebrow"><span class="eyebrow-dot"></span> IT WILL</div>
-            <h2>它会做</h2>
-            <ul>
-              <li>播放、暂停后恢复当前课程视频</li>
-              <li>识别随堂练习并协助作答</li>
-              <li>跳过章节测试，进入下一节</li>
-              <li>视频结束后自动续播</li>
-              <li>卡住时重试并记录日志</li>
-            </ul>
-          </article>
-
-          <article class="tool-boundary tool-boundary-dont">
-            <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> IT WON'T</div>
-            <h2>它不会</h2>
-            <ul>
-              <li>登录你的账号或保存密码</li>
-              <li>进入、作答或提交章节测试</li>
-              <li>绕过人脸识别、监考或防切屏</li>
-              <li>修改成绩或伪造观看进度</li>
-              <li>把 API Key 上传到本站</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 常见问题 ==================== -->
-    <section class="tool-section tool-faq-section" id="faq">
-      <div class="container tool-faq-wrap">
-        <div class="tool-faq-intro">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> FAQ</div>
-          <h2>先把疑问放这里<span class="title-dot">.</span></h2>
-          <p>如果还有问题，可以点右上角“联系我”。</p>
-        </div>
-
-        <div class="tool-faq-list">
-          <details>
-            <summary>没有 API Key 能用吗？</summary>
-            <p>可以。遇到随堂练习时，程序会在控制台显示题目和选项，你输入 A、B 或 A,C 即可。配置 Key 后才会自动作答。</p>
-          </details>
-          <details>
-            <summary>它会帮我做章节测试吗？</summary>
-            <p>不会。程序只跳过章节测试，不进入、不点选项、不提交。考试、人脸识别和监考环节也不会处理。</p>
-          </details>
-          <details>
-            <summary>为什么视频结束以后会停住？</summary>
-            <p>有些小节只是目录页，没有视频；也可能是页面切换较慢。程序现在会等待 7 秒，之后跳过测试并向后尝试最多 6 个小节，连续 3 次失败才会停止。</p>
-          </details>
-          <details>
-            <summary>平台要求先通过测试才能看下一章怎么办？</summary>
-            <p>这是平台的服务端顺序限制，程序无法绕过。需要手动完成该章节测试后，再启动程序继续。</p>
-          </details>
-          <details>
-            <summary>Windows 提示脚本有风险？</summary>
-            <p>这是未签名的本地 PowerShell 脚本，Windows 可能弹出提示。确认文件来自本页后，右键查看属性并解除锁定，或在提示中选择“仍要运行”。</p>
-          </details>
-          <details>
-            <summary>为什么不能直接在这个网页里运行？</summary>
-            <p>浏览器不允许网页读取另一个标签页的内容，也不允许模拟桌面点击。自动播放和答题需要 Edge 的 UI Automation，只能在本机运行。</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 下载 ==================== -->
-    <section class="tool-section tool-download-section" id="download">
-      <div class="container">
-        <div class="tool-download-card">
-          <div>
-            <div class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span> DOWNLOAD</div>
-            <h2>把重复操作交给它<span class="title-dot">.</span></h2>
-            <p>下载后解压，双击 <code>Start-Helper.cmd</code> 即可。压缩包内不含 API Key。</p>
-          </div>
-          <div class="tool-download-side">
-            <a class="btn btn-light" href="../assets/downloads/zhihuishu-helper.zip" download>
-              <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M10 3v10m0 0 4-4m-4 4-4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              下载 ZIP
-            </a>
-            <span>v1.0.0 · 12 KB</span>
-          </div>
-        </div>
-
-        <div class="tool-checksum">
-          <span>SHA-256</span>
-          <code>9FAC9292E6A005ECBD1390CBB92948C811D87971185008FF9E84B58B4D32111C</code>
-        </div>
-      </div>
-    </section>
+    <h2>配置 API Key</h2>
+    <p>
+      用记事本打开解压目录里的 <code>config.json</code>，把 <code>apiKey</code> 改成你的 Key。保存后重新启动程序。
+    </p>
+    <pre><code>{
+  "autoAnswer": true,
+  "autoNext": true,
+  "skipChapterTests": true,
+  "pollSeconds": 2,
+  "apiBase": "https://api.deepseek.com",
+  "model": "deepseek-chat",
+  "apiKey": "你的Key"
+}</code></pre>
+    <p>
+      如果使用其他 OpenAI 兼容接口，把 <code>apiBase</code> 和 <code>model</code> 改成对应值即可。
+      不填写 Key 也能运行，遇到随堂练习时程序会在控制台让你输入 A、B 或 A,C。
+    </p>
+    <p class="doc-note">
+      API Key 只保存在本机的 <code>config.json</code>，不会上传到本站。
+    </p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-main">
-      <div class="footer-brand">
-        <a class="brand" href="../index.html#works" aria-label="返回皮神科技作品页">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" fill="none">
-              <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
-        </a>
-        <p data-copy="footerTagline">用代码做一些小而美的东西。</p>
-      </div>
-
-      <div class="footer-contact">
-        <span class="footer-label">找我</span>
-        <a href="mailto:pishen2007@163.com" data-email-link data-email-text>pishen2007@163.com</a>
-        <a href="https://github.com/pishenX" target="_blank" rel="noopener noreferrer" data-github-link>github.com/pishenX</a>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>© <span data-year>2026</span> <span data-copy="copyright">皮神科技</span>. All rights reserved.</p>
-      <p class="footer-made">Made with AI agent.</p>
-    </div>
+  <footer class="doc-footer">
+    <div class="container">© 2026 皮神科技 · 智慧树学习助手</div>
   </footer>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>
