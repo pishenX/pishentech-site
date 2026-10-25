@@ -1449,6 +1449,11 @@ button {
   padding-bottom: 38px;
 }
 
+/* 只有作品页：页脚没有“逛逛”导航，改成两栏 */
+body[data-page="works"] .footer-main {
+  grid-template-columns: 1.5fr 1fr;
+}
+
 .footer-brand p {
   max-width: 260px;
   margin: 13px 0 0;
@@ -2663,6 +2668,10 @@ button {
   .footer-main {
     grid-template-columns: 1fr 1fr;
     gap: 30px 24px;
+  }
+
+  body[data-page="works"] .footer-main {
+    grid-template-columns: 1fr;
   }
 
   .footer-brand {
