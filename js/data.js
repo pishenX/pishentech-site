@@ -66,6 +66,22 @@ window.SITE_DATA = {
      ======================================================================== */
   projects: [
     {
+      id: "what-to-eat",
+      title: "今天吃什么",
+      subtitle: "LUNCH DECIDER",
+      category: "web",
+      year: "2026",
+      description: "选择困难症终结者，转一转，决定今天这一餐。",
+      tags: ["Vanilla JS", "SVG", "LocalStorage"],
+      cover: "assets/cover-food.svg",
+      coverAlt: "今天吃什么网页应用封面，暖色转盘与菜品列表",
+      link: "eat/",
+      linkLabel: "打开转盘",
+      code: "",
+      codeLabel: "查看代码",
+      download: false
+    },
+    {
       id: "zhihuishu-helper",
       title: "智慧树学习助手",
       subtitle: "COURSE AUTOMATION",
