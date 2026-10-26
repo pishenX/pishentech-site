@@ -31,6 +31,7 @@
   const wheelKey = document.body.getAttribute("data-wheel");
   const source = (window.EAT_WHEELS && window.EAT_WHEELS[wheelKey]) || {};
   const DISHES = normalizeDishes(source.dishes);
+  const dataLoaded = Boolean(window.EAT_WHEELS);
 
   const els = {
     wheel: $(".wheel"),
@@ -70,13 +71,37 @@
 
   function normalizePrice(value) {
     if (value === null || value === undefined || value === "") return null;
-    const number = Number(value);
-    if (!Number.isFinite(number) || number < 0) return null;
-    return Math.round(number * 100) / 100;
+
+    if (typeof value === "number") {
+      return Number.isFinite(value) && value >= 0 ? roundPrice(value) : null;
+    }
+
+    if (typeof value !== "string") return null;
+
+    let text = value.trim();
+    if (!text) return null;
+
+    text = text.replace(/^[¥￥]\s*/, "").replace(/\s*(元|块)$/, "").trim();
+    if (!text) return null;
+
+    if (/^\d+(\.\d+)?$/.test(text)) {
+      return roundPrice(Number(text));
+    }
+
+    if (/^\d+(\.\d+)?\s*[-~～—–至]\s*\d+(\.\d+)?$/.test(text)) {
+      return text.replace(/\s+/g, "").replace(/[~～—–至]/g, "-");
+    }
+
+    return null;
+  }
+
+  function roundPrice(value) {
+    return Math.round(value * 100) / 100;
   }
 
   function formatPrice(value) {
     if (value === null) return "";
+    if (typeof value === "string") return value;
     return Number.isInteger(value) ? String(value) : String(Number(value.toFixed(2)));
   }
 
@@ -396,6 +421,10 @@
      ======================================================================== */
   function updateHint() {
     if (!els.hint) return;
+    if (!dataLoaded) {
+      els.hint.textContent = "菜谱加载失败，检查 eat/data.js。";
+      return;
+    }
     els.hint.textContent = DISHES.length
       ? "指针停在哪儿，就吃哪儿。"
       : "在 eat/data.js 里加菜。";
@@ -539,14 +568,19 @@
   }
 
   function init() {
-    if (!window.EAT_WHEELS) {
+    if (!dataLoaded) {
       console.warn("eat/data.js 没有加载，或文件里有语法错误。");
     }
 
     bindEvents();
     buildWheel();
 
-    if (DISHES.length) {
+    if (!dataLoaded) {
+      showEmpty(
+        "菜谱加载失败",
+        "检查 eat/data.js 里的逗号、引号和价格写法；按 F12 看 Console 里的红字。"
+      );
+    } else if (DISHES.length) {
       showEmpty("答案还在转盘里", "按一下中间的「转」。");
     } else {
       showEmpty("这个转盘还没有菜", "打开 eat/data.js，在 dishes 里加几道菜，刷新页面。");

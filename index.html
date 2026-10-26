@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="今天吃什么：北洋园、卫津路，校内或附近，选一个转盘决定这一顿。">
+  <meta name="description" content="皮神科技个人站，展示一些小软件和代码。">
   <meta name="author" content="皮神">
   <meta name="theme-color" content="#f6f8fc">
-  <link rel="canonical" href="https://pishentech.cn/eat/">
+  <link rel="canonical" href="https://pishentech.cn/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="皮神科技">
-  <meta property="og:title" content="今天吃什么 · 皮神科技">
-  <meta property="og:description" content="北洋园、卫津路，校内或附近，选一个转盘决定这一顿。">
-  <meta property="og:url" content="https://pishentech.cn/eat/">
-  <title>今天吃什么 · 皮神科技</title>
+  <meta property="og:title" content="皮神科技">
+  <meta property="og:description" content="皮神科技个人站，展示一些小软件和代码。">
+  <meta property="og:url" content="https://pishentech.cn/">
+  <title>皮神科技</title>
 
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="eat.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
 </head>
 
-<body class="eat-page">
+<body data-page="works">
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <header class="eat-header">
-    <div class="container eat-header-inner">
-      <a class="brand" href="../index.html#works" aria-label="返回皮神科技作品页">
+  <!-- ==================== 顶部导航 ==================== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#works" aria-label="皮神科技作品页">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" fill="none">
             <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,68 +35,80 @@
         </span>
         <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
       </a>
-      <a class="eat-back" href="../index.html#works">← 返回作品</a>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm header-contact" href="mailto:hello@pishentech.cn" data-email-link>
+          联系我
+          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 15 15 5M7 5h8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hub-hero">
+    <!-- ==================== 作品 ==================== -->
+    <section class="works works-page" id="works">
       <div class="container">
-        <p class="hub-kicker">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          MEAL DECIDER · 今日份选择
-        </p>
-        <h1 class="hub-title">今天吃什么<span class="title-dot">.</span></h1>
-        <p class="hub-lead">先选一个转盘。北洋园、卫津路，校内或附近。</p>
+        <div class="section-head works-head">
+          <div class="section-title-wrap">
+            <h1 class="works-title">皮神妙妙小工具<span class="title-dot">.</span></h1>
+          </div>
+
+          <div class="works-head-side">
+            <p class="section-desc">
+              皮神科技，更多由Agent开发的工具正在上线中......
+            </p>
+            <div class="works-count">
+              <span><strong data-stat="projects">02</strong> 个作品</span>
+              <i aria-hidden="true"></i>
+              <span><strong data-stat="opensource">00</strong> 个已开源</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 作品卡片由 JS 根据 data.js 自动生成 -->
+        <div class="project-grid" data-projects></div>
+
+        <div class="empty-state" data-empty hidden>
+          <span class="empty-icon" aria-hidden="true">◌</span>
+          <h2>这个分类还在装修</h2>
+          <p>换个分类看看，或者过阵子再来。</p>
+        </div>
       </div>
-    </section>
-
-    <section class="container hub-grid" aria-label="选择转盘">
-      <section class="campus-card">
-        <div class="campus-head">
-          <h2>北洋园</h2>
-          <span>BEIYANG</span>
-        </div>
-        <div class="campus-links">
-          <a class="campus-link" href="beiyang-campus/">
-            <span class="campus-link-main">校内</span>
-            <span class="campus-link-sub">食堂</span>
-            <span class="campus-link-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="campus-link" href="beiyang-nearby/">
-            <span class="campus-link-main">附近</span>
-            <span class="campus-link-sub">周边小馆</span>
-            <span class="campus-link-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="campus-card">
-        <div class="campus-head">
-          <h2>卫津路</h2>
-          <span>WEIJIN</span>
-        </div>
-        <div class="campus-links">
-          <a class="campus-link" href="weijin-campus/">
-            <span class="campus-link-main">校内</span>
-            <span class="campus-link-sub">食堂</span>
-            <span class="campus-link-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="campus-link" href="weijin-nearby/">
-            <span class="campus-link-main">附近</span>
-            <span class="campus-link-sub">周边小馆</span>
-            <span class="campus-link-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
     </section>
   </main>
 
-  <footer class="eat-footer">
-    <div class="container eat-footer-inner">
-      <span>© 2026 皮神科技 · 今天吃什么</span>
-      <span>北洋园 · 卫津路</span>
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#works" aria-label="皮神科技作品页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
+        </a>
+        <p data-copy="footerTagline">用代码做一些小而美的东西。</p>
+      </div>
+
+      <div class="footer-contact">
+        <span class="footer-label">找我</span>
+        <a href="mailto:hello@pishentech.cn" data-email-link data-email-text>hello@pishentech.cn</a>
+        <a href="https://github.com/pishenX" target="_blank" rel="noopener noreferrer" data-github-link>github.com/pishenX</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> <span data-copy="copyright">皮神科技</span>. All rights reserved.</p>
+      <p class="footer-made">Made with AI agent.</p>
     </div>
   </footer>
+
+  <!-- 操作提示（比如点到了还没填的链接），平时隐藏 -->
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>
