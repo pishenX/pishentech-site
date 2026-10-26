@@ -3,41 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="今天吃什么：皮神科技做的午饭转盘。从 50 道菜里随机抽 8 个，转一下，午餐就有答案。">
+  <meta name="description" content="今天吃什么：北洋园、卫津路，校内或附近，选一个转盘决定这一顿。">
   <meta name="author" content="皮神">
   <meta name="theme-color" content="#f6f8fc">
   <link rel="canonical" href="https://pishentech.cn/eat/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="皮神科技">
   <meta property="og:title" content="今天吃什么 · 皮神科技">
-  <meta property="og:description" content="选择困难症不是病，转一下就好了。">
+  <meta property="og:description" content="北洋园、卫津路，校内或附近，选一个转盘决定这一顿。">
   <meta property="og:url" content="https://pishentech.cn/eat/">
   <title>今天吃什么 · 皮神科技</title>
 
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="eat.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "今天吃什么",
-    "url": "https://pishentech.cn/eat/",
-    "description": "从 50 道菜里随机抽 8 个，转一下，午餐就有答案。",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
-  }
-  </script>
-
-  <script src="eat.js" defer></script>
 </head>
 
 <body class="eat-page">
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <!-- ==================== 顶部 ==================== -->
   <header class="eat-header">
     <div class="container eat-header-inner">
       <a class="brand" href="../index.html#works" aria-label="返回皮神科技作品页">
@@ -48,187 +32,68 @@
         </span>
         <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
       </a>
-
-      <div class="eat-header-actions">
-        <span class="eat-header-chip">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          纯前端运行 · 数据不上传
-        </span>
-        <a class="eat-back" href="../index.html#works">
-          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M16 10H4m0 0 5-5m-5 5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          返回作品
-        </a>
-      </div>
+      <a class="eat-back" href="../index.html#works">← 返回作品</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- ==================== 标题 ==================== -->
-    <section class="eat-hero">
-      <div class="container eat-hero-grid">
-        <div class="eat-hero-copy">
-          <p class="eat-kicker">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            LUNCH DECIDER · 今日份选择
-          </p>
-          <h1 class="eat-title">今天吃什么<span class="title-dot">.</span></h1>
-          <p class="eat-lead">
-            选择困难症不是病，转一下就好了。从 <strong data-pool-count>50</strong> 道菜里随机挑，
-            指针停在哪儿，<span class="eat-nowrap">今天就吃哪儿。</span>
-          </p>
-        </div>
-
-        <div class="eat-hero-side">
-          <div class="eat-facts" aria-label="转盘信息">
-            <div>
-              <strong data-pool-count>50</strong>
-              <span>道备选</span>
-            </div>
-            <i aria-hidden="true"></i>
-            <div>
-              <strong data-candidate-count>8</strong>
-              <span>个候选</span>
-            </div>
-            <i aria-hidden="true"></i>
-            <div>
-              <strong data-spin-count>00</strong>
-              <span>次翻牌</span>
-            </div>
-          </div>
-          <p class="eat-date">
-            <span data-clock>12:30</span>
-            ·
-            <span data-meal>午饭</span>时间
-            <span class="eat-date-sep">/</span>
-            <span data-today>10 月 25 日 星期日</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== 转盘 ==================== -->
-    <section class="container eat-app" aria-label="今天吃什么转盘">
-      <div class="eat-stage-card">
-        <div class="eat-card-head">
-          <div>
-            <span class="eat-step">01 / 今日转盘</span>
-            <p class="eat-card-sub"><span data-candidate-copy>随机抽 8 个</span>，指针说了算</p>
-          </div>
-          <button class="eat-shuffle" type="button" data-shuffle>
-            <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-              <path d="M4 5h2.4c1 0 1.9.5 2.5 1.3l2.2 3.4c.6.8 1.5 1.3 2.5 1.3H16M13.5 7.5 16 5l-2.5-2.5M4 15h2.4c1 0 1.9-.5 2.5-1.3l2.2-3.4c.6-.8 1.5-1.3 2.5-1.3H16M13.5 17.5 16 15l-2.5-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span data-shuffle-label>换一批</span>
-          </button>
-        </div>
-
-        <div class="eat-wheel-stage" data-wheel-stage>
-          <span class="eat-wheel-halo" aria-hidden="true"></span>
-          <svg
-            class="eat-wheel"
-            viewBox="0 0 500 500"
-            role="img"
-            aria-label="今天吃什么的转盘。按下方按钮转动，指针停在哪个格子就吃哪道菜。"
-            data-wheel
-          ></svg>
-          <span class="eat-pointer" aria-hidden="true"></span>
-          <button class="eat-hub" type="button" data-spin aria-label="转动转盘">
-            <span class="eat-hub-main">转</span>
-            <span class="eat-hub-sub">LET FATE DECIDE</span>
-          </button>
-        </div>
-
-        <button class="btn btn-primary eat-spin-btn" type="button" data-spin>
-          <svg class="icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <rect x="3" y="3" width="14" height="14" rx="3.5" stroke="currentColor" stroke-width="1.6"/>
-            <circle cx="7.2" cy="7.2" r="1.15" fill="currentColor"/>
-            <circle cx="12.8" cy="12.8" r="1.15" fill="currentColor"/>
-            <circle cx="12.8" cy="7.2" r="1.15" fill="currentColor"/>
-            <circle cx="7.2" cy="12.8" r="1.15" fill="currentColor"/>
-          </svg>
-          <span data-spin-label>转一转，听天由命</span>
-        </button>
-
-        <p class="eat-hint">
-          指针停在哪个格，今天就是哪道菜。不满意可以再转，转盘不会生气。
+    <section class="hub-hero">
+      <div class="container">
+        <p class="hub-kicker">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          MEAL DECIDER · 今日份选择
         </p>
-      </div>
-
-      <div class="eat-side">
-        <article class="eat-result" data-result aria-live="polite">
-          <div class="eat-result-empty">
-            <span class="eat-empty-mark" aria-hidden="true">?</span>
-            <h2>答案还在转盘里</h2>
-            <p>点一下转盘中间的「转」，或者按下面的按钮。</p>
-            <div class="eat-empty-steps" aria-hidden="true">
-              <span><b>01</b>选条件</span>
-              <span><b>02</b>转一转</span>
-              <span><b>03</b>就吃这个</span>
-            </div>
-          </div>
-        </article>
-
-        <aside class="eat-prefs" aria-label="筛选条件">
-          <div class="eat-card-head eat-prefs-head">
-            <div>
-              <span class="eat-step">02 / 缩小范围</span>
-              <p class="eat-card-sub">太纠结的话，先排除一些</p>
-            </div>
-            <span class="eat-pool-count"><strong data-pool-count>50</strong> 道可选</span>
-          </div>
-
-          <div class="eat-pref-row">
-            <span class="eat-pref-label">预算</span>
-            <div class="eat-chips" role="group" aria-label="预算">
-              <button class="eat-chip is-active" type="button" data-budget="0" aria-pressed="true">不限</button>
-              <button class="eat-chip" type="button" data-budget="20" aria-pressed="false">¥20 内</button>
-              <button class="eat-chip" type="button" data-budget="30" aria-pressed="false">¥30 内</button>
-              <button class="eat-chip" type="button" data-budget="50" aria-pressed="false">¥50 内</button>
-            </div>
-          </div>
-
-          <div class="eat-pref-row">
-            <span class="eat-pref-label">辣度</span>
-            <div class="eat-chips" role="group" aria-label="辣度">
-              <button class="eat-chip is-active" type="button" data-spice="any" aria-pressed="true">都行</button>
-              <button class="eat-chip" type="button" data-spice="0" aria-pressed="false">不辣</button>
-              <button class="eat-chip" type="button" data-spice="1" aria-pressed="false">微辣</button>
-              <button class="eat-chip" type="button" data-spice="2" aria-pressed="false">重辣</button>
-            </div>
-          </div>
-
-          <label class="eat-switch">
-            <input type="checkbox" data-avoid-history checked>
-            <span class="eat-switch-track" aria-hidden="true"></span>
-            <span>今天吃过的，先别出现</span>
-          </label>
-        </aside>
+        <h1 class="hub-title">今天吃什么<span class="title-dot">.</span></h1>
+        <p class="hub-lead">先选一个转盘。北洋园、卫津路，校内或附近。</p>
       </div>
     </section>
 
-    <!-- ==================== 记录 ==================== -->
-    <section class="container eat-history-section" aria-label="今日已定记录">
-      <div class="eat-history-card">
-        <div class="eat-history-head">
-          <span class="eat-step">03 / 今日已定</span>
-          <p>点过「就吃这个」的菜会记在这里，刷新页面也不会丢。</p>
+    <section class="container hub-grid" aria-label="选择转盘">
+      <section class="campus-card">
+        <div class="campus-head">
+          <h2>北洋园</h2>
+          <span>BEIYANG</span>
         </div>
-        <div class="eat-history-list" data-history></div>
-        <button class="eat-clear" type="button" data-clear-history>清空</button>
-      </div>
+        <div class="campus-links">
+          <a class="campus-link" href="beiyang-campus/">
+            <span class="campus-link-main">校内</span>
+            <span class="campus-link-sub">食堂</span>
+            <span class="campus-link-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="campus-link" href="beiyang-nearby/">
+            <span class="campus-link-main">附近</span>
+            <span class="campus-link-sub">周边小馆</span>
+            <span class="campus-link-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="campus-card">
+        <div class="campus-head">
+          <h2>卫津路</h2>
+          <span>WEIJIN</span>
+        </div>
+        <div class="campus-links">
+          <a class="campus-link" href="weijin-campus/">
+            <span class="campus-link-main">校内</span>
+            <span class="campus-link-sub">食堂</span>
+            <span class="campus-link-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="campus-link" href="weijin-nearby/">
+            <span class="campus-link-main">附近</span>
+            <span class="campus-link-sub">周边小馆</span>
+            <span class="campus-link-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
     </section>
   </main>
 
-  <!-- ==================== 页脚 ==================== -->
   <footer class="eat-footer">
     <div class="container eat-footer-inner">
-      <span>© <span data-year>2026</span> 皮神科技 · 今天吃什么</span>
-      <span>用一点点运气，解决一顿饭。</span>
+      <span>© 2026 皮神科技 · 今天吃什么</span>
+      <span>北洋园 · 卫津路</span>
     </div>
   </footer>
-
-  <div class="toast" role="status" aria-live="polite" data-toast></div>
 </body>
 </html>

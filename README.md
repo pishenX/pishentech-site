@@ -1,6 +1,6 @@
 # 皮神科技 · 作品页
 
-现在网站以**作品页**为主，并增加了两个独立页面：智慧树学习助手说明（`/zhihuishu/`）和「今天吃什么」转盘（`/eat/`）。打开首页就是作品列表，没有首页大横幅，也没有关于页。整体仍然是浅色背景、蓝色主色、圆角卡片，手机上是一列卡片，不用横向滚动。
+现在网站以**作品页**为主，并增加了智慧树学习助手说明（`/zhihuishu/`）和「今天吃什么」系列（`/eat/` 是入口，里面有北洋园 / 卫津路、校内 / 附近四个转盘）。打开首页就是作品列表，没有首页大横幅，也没有关于页。整体仍然是浅色背景、蓝色主色、圆角卡片，手机上是一列卡片，不用横向滚动。
 
 
 
@@ -38,13 +38,22 @@ pishentech-site/
 ├── zhihuishu/
 │   └── index.html      ← 智慧树学习助手：使用方法和 API Key 配置
 ├── eat/
-│   ├── index.html      ← 今天吃什么：转盘页面
-│   ├── eat.css         ← 转盘页专用样式
-│   └── eat.js          ← 50 道菜数据和转盘逻辑
+│   ├── index.html      ← 今天吃什么：入口页，选择校区和场景
+│   ├── data.js         ← ★ 四个转盘的菜谱，在这里加菜
+│   ├── eat.css         ← 入口页和转盘页样式
+│   ├── eat.js          ← 转盘逻辑（一般别动）
+│   ├── beiyang-campus/
+│   │   └── index.html  ← 北洋园 · 校内
+│   ├── beiyang-nearby/
+│   │   └── index.html  ← 北洋园 · 附近
+│   ├── weijin-campus/
+│   │   └── index.html  ← 卫津路 · 校内
+│   └── weijin-nearby/
+│       └── index.html  ← 卫津路 · 附近
 ├── css/
 │   └── style.css       ← 颜色、圆角、卡片、手机布局
 ├── js/
-│   ├── data.js         ← ★ 最常改：作品、邮箱、GitHub
+│   ├── data.js         ← ★ 作品、邮箱、GitHub
 │   └── site.js         ← 交互：卡片点击（一般别动）
 ├── assets/
 │   ├── cover-food.svg             ← 今天吃什么作品封面
@@ -57,7 +66,7 @@ pishentech-site/
 └── README.md           ← 这份说明书
 ```
 
-**记住：改内容去 `js/data.js`，改颜色去 `css/style.css`。**
+**记住：作品和邮箱去 `js/data.js`，转盘菜谱去 `eat/data.js`，颜色去 `css/style.css`。**
 
 ---
 
@@ -169,18 +178,63 @@ download: true
 
 首页卡片在 `js/data.js` 的 `projects` 列表里，`id` 是 `zhihuishu-helper`，点击后进入 `zhihuishu/`。下载包内不包含任何 API Key。
 
-### 4.7 新增的「今天吃什么」网页应用
+### 4.7 「今天吃什么」：入口 + 四个转盘
 
-- 页面：`eat/index.html`
-- 样式：`eat/eat.css`
-- 数据和逻辑：`eat/eat.js`
+- 入口页：`eat/index.html`（选择北洋园 / 卫津路、校内 / 附近）
+- 四个转盘页：
+  - `eat/beiyang-campus/index.html`：北洋园 · 校内
+  - `eat/beiyang-nearby/index.html`：北洋园 · 附近
+  - `eat/weijin-campus/index.html`：卫津路 · 校内
+  - `eat/weijin-nearby/index.html`：卫津路 · 附近
+- 菜谱：`eat/data.js`（四个 `dishes` 数组，已经清空）
+- 样式和逻辑：`eat/eat.css`、`eat/eat.js`
 - 封面：`assets/cover-food.svg`
 
-这是一个纯前端转盘：50 道菜、预算和辣度筛选、当天吃过的不重复，记录保存在浏览器的 `localStorage` 里。首页卡片 `id` 是 `what-to-eat`，点击后进入 `eat/`。页面不请求接口，也不上传任何数据。
+首页卡片 `id` 是 `what-to-eat`，点击后进入 `eat/` 入口。整个应用不请求接口，也不上传数据。结果卡片只显示菜名、一句话简介和价格，没有分类、辣度或标签。
 
-想加菜或换菜，打开 `eat/eat.js`，改最上面的 `DISHES` 数组。每道菜有 `name`、`short`、`category`、`price`、`spicy`、`tags`、`note` 七个字段；转盘上显示的是 `short`，建议控制在 2～5 个字。
+### 4.8 怎么给转盘加菜（重点）
 
-转盘每次最多抽 8 个候选（`MAX_CANDIDATES`），筛选后菜太少时会自动减少候选数量。
+菜品已经全部清空，四个转盘的 `dishes` 都是空数组。加菜只需要改 `eat/data.js`。
+
+**第一步：找到要改的转盘**
+
+| 页面 | 地址 | `data.js` 里的 key |
+| --- | --- | --- |
+| 北洋园 · 校内 | `/eat/beiyang-campus/` | `"beiyang-campus"` |
+| 北洋园 · 附近 | `/eat/beiyang-nearby/` | `"beiyang-nearby"` |
+| 卫津路 · 校内 | `/eat/weijin-campus/` | `"weijin-campus"` |
+| 卫津路 · 附近 | `/eat/weijin-nearby/` | `"weijin-nearby"` |
+
+**第二步：在 `dishes: [` 和 `]` 之间加一行**
+
+```js
+{ name: "菜名", note: "一句话简介", price: 26 },
+```
+
+**第三步：多道菜就多写几行，保存刷新**
+
+```js
+"beiyang-campus": {
+  dishes: [
+    { name: "番茄牛腩饭", note: "汤汁拌饭，一口下去很踏实。", price: 26 },
+    { name: "黄焖鸡米饭", note: "香菇和鸡汤，永远站在米饭这边。", price: 24 },
+    { name: "兰州牛肉面", note: "一清二白三红四绿，标准答案。", price: 22 }
+  ]
+},
+```
+
+注意：
+
+- 每道菜末尾要有英文逗号，最后一道菜后面也可以留。
+- 用英文双引号 `"` 和英文逗号 `,`，不要用中文的“”和，。
+- `name` 建议 2～6 个字，转盘上才放得下；更长会自动缩小或省略号，结果卡片仍显示全名。
+- `note` 写一句话；不想写可以留空 `""`。
+- `price` 写数字，单位是元，不要写 `¥26` 或 `"26 元"`；显示时会自动加 `¥`。不写 `price` 时结果卡片不显示价格。
+- 每个转盘最多抽 8 道菜上盘。超过 8 道时，转盘下方会出现「换一批」。
+- 某个转盘保持 `dishes: []` 时，页面会显示空状态，不会报错。
+- 加完不显示？先检查英文逗号和双引号，再按 **F12** 看 Console 有没有红字；`eat/data.js` 有语法错误时四个页面都会变空。
+
+> 改完保存，刷新对应页面就能看到。四个页面共用 `eat/data.js`，不用分别改四个文件。
 
 ---
 
@@ -232,10 +286,15 @@ download: true
 ### 这次新增「今天吃什么」需要上传
 
 - `eat/index.html`
+- `eat/data.js`
 - `eat/eat.css`
 - `eat/eat.js`
+- `eat/beiyang-campus/index.html`
+- `eat/beiyang-nearby/index.html`
+- `eat/weijin-campus/index.html`
+- `eat/weijin-nearby/index.html`
 - `assets/cover-food.svg`
-- `js/data.js`（新增卡片）
+- `js/data.js`（更新卡片文案）
 - `sitemap.xml`
 
 最省事的做法还是把整个 `pishentech-site` 文件夹里的内容全选拖上去。上传 `eat` 文件夹时，记得连文件夹一起拖，不要只拖里面的单个文件，否则路径会变成 `/index.html` 而不是 `/eat/`。
@@ -338,6 +397,6 @@ download: true
 
 ## 10. 最后
 
-这个网站现在有作品首页、一个工具详情页和一个「今天吃什么」转盘。作品卡片内容在 `js/data.js` 里；详情页和转盘页分别是独立的 `zhihuishu/index.html`、`eat/index.html`，加新作品时通常只需要改数据。
+这个网站现在有作品首页、一个工具详情页，以及「今天吃什么」入口和四个校区 / 场景转盘。作品卡片内容在 `js/data.js` 里；详情页是 `zhihuishu/index.html`，「今天吃什么」的入口和四个转盘在 `eat/` 下，菜谱统一放在 `eat/data.js`。加新作品时通常只需要改数据。
 
 先替换示例作品和邮箱，再上传到 GitHub，网站就是你的了。
