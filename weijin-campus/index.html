@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="卫津路校内转盘：卫津路食堂不知道吃什么？转一下，随机决定今天这一顿。">
+  <meta name="author" content="皮神">
+  <meta name="theme-color" content="#f6f8fc">
+  <link rel="canonical" href="https://pishentech.cn/eat/weijin-campus/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="皮神科技">
+  <meta property="og:title" content="卫津路校内转盘 · 今天吃什么">
+  <meta property="og:description" content="卫津路的食堂，也可以交给运气。">
+  <meta property="og:url" content="https://pishentech.cn/eat/weijin-campus/">
+  <title>卫津路校内转盘 · 今天吃什么</title>
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../eat.css">
+
+  <script src="../data.js" defer></script>
+  <script src="../eat.js" defer></script>
+</head>
+
+<body class="eat-page wheel-page" data-wheel="weijin-campus">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="eat-header">
+    <div class="container eat-header-inner">
+      <a class="brand" href="../../index.html#works" aria-label="返回皮神科技作品页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <path d="M12.5 9 6 16l6.5 7M19.5 9l6.5 7-6.5 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">皮神科技<span class="brand-dot">.</span></span>
+      </a>
+      <a class="eat-back" href="../../index.html#works">← 返回作品</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wheel-hero">
+      <div class="container">
+        <a class="wheel-crumb" href="../">← 全部转盘</a>
+        <h1 class="wheel-title">卫津路 · 校内</h1>
+        <p class="wheel-lead">卫津路的食堂，也可以交给运气。</p>
+        <nav class="wheel-nav" aria-label="切换转盘">
+          <a href="../beiyang-campus/">北洋园校内</a>
+          <a href="../beiyang-nearby/">北洋园附近</a>
+          <a href="../weijin-campus/" aria-current="page">卫津路校内</a>
+          <a href="../weijin-nearby/">卫津路附近</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="container wheel-app" aria-label="今天吃什么转盘">
+      <div class="wheel-card">
+        <div class="wheel-stage" data-wheel-stage>
+          <svg class="wheel" viewBox="0 0 500 500" role="img" aria-label="今天吃什么的转盘"></svg>
+          <span class="wheel-pointer" aria-hidden="true"></span>
+          <button class="wheel-hub" type="button" data-spin aria-label="转动转盘">
+            <span class="wheel-hub-text">转</span>
+          </button>
+        </div>
+        <div class="wheel-foot">
+          <span class="wheel-hint" data-hint>指针停在哪儿，就吃哪儿。</span>
+          <button class="wheel-shuffle" type="button" data-shuffle hidden>换一批</button>
+        </div>
+      </div>
+
+      <article class="answer-card" data-result aria-live="polite">
+        <div class="answer-empty">
+          <span class="answer-mark" aria-hidden="true">?</span>
+          <h2>答案还在转盘里</h2>
+          <p>按一下中间的「转」。</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="eat-footer">
+    <div class="container eat-footer-inner">
+      <span>© 2026 皮神科技 · 今天吃什么</span>
+      <span>卫津路 · 校内</span>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>
